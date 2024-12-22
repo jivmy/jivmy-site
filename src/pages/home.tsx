@@ -6,7 +6,7 @@ import Rive from '@rive-app/react-canvas';
 const Home = () => {
   return (
     <div className="wrapper">
-      <h1 className="header">Crafting playful interfaces from New York City.</h1>
+      <h1 className="header">Crafting playful interfaces from New York City</h1>
       <div className="demo-grid">
         <div className="demo">
           <ColorPalette />
