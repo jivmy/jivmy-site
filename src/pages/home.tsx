@@ -1,52 +1,46 @@
 import React, { useEffect, useRef } from 'react';
 import '../index.css';
 import ColorPalette from '../components/ColorPalette';
-import * as rive from '@rive-app/canvas';
+import { Rive } from '@rive-app/canvas';
 
 const Home = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const riveRef = useRef<rive.Rive | null>(null);
 
   useEffect(() => {
-    const initRive = async () => {
-      if (!canvasRef.current) return;
+    if (!canvasRef.current) return;
 
-      try {
-        // Initialize Rive animation
-        riveRef.current = new rive.Rive({
-          src: "/rive/button.riv",
-          canvas: canvasRef.current,
-          autoplay: true,
-          stateMachines: "button state",
-          onLoad: () => {
-            if (riveRef.current) {
-              riveRef.current.resizeDrawingSurfaceToCanvas();
-            }
-          }
-        });
+    // Set initial canvas size
+    const container = canvasRef.current.parentElement;
+    if (container) {
+      canvasRef.current.width = container.clientWidth;
+      canvasRef.current.height = container.clientHeight;
+    }
 
-        // Handle window resizing
-        const handleResize = () => {
-          if (riveRef.current) {
-            riveRef.current.resizeDrawingSurfaceToCanvas();
-          }
-        };
+    const rive = new Rive({
+      src: "/rive/button.riv",
+      canvas: canvasRef.current,
+      autoplay: true,
+      stateMachines: "button state",
+      onLoad: () => {
+        rive.resizeDrawingSurfaceToCanvas();
+      }
+    });
 
-        window.addEventListener('resize', handleResize);
-
-        // Cleanup function
-        return () => {
-          window.removeEventListener('resize', handleResize);
-          if (riveRef.current) {
-            riveRef.current.cleanup();
-          }
-        };
-      } catch (error) {
-        console.error("Error initializing Rive:", error);
+    // Handle window resizing
+    const handleResize = () => {
+      if (canvasRef.current && container) {
+        canvasRef.current.width = container.clientWidth;
+        canvasRef.current.height = container.clientHeight;
+        rive.resizeDrawingSurfaceToCanvas();
       }
     };
 
-    initRive();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      rive.cleanup();
+    };
   }, []);
 
   return (
