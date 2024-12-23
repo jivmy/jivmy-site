@@ -45,6 +45,10 @@ module.exports = {
         { 
           from: 'public/rive',
           to: 'rive'
+        },
+        {
+          from: 'public/images',
+          to: 'images'
         }
       ]
     })
