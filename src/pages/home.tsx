@@ -17,6 +17,12 @@ const Home = () => {
     isTouchScrollEnabled: true,
   });
 
+  const { RiveComponent: BallComponent } = useRive({
+    src: "/rive/ball.riv",
+    autoplay: true,
+    isTouchScrollEnabled: true,
+  });
+
   return (
     <div className="wrapper">
       <h1 className="header">Crafting playful interfaces from New York City</h1>
@@ -27,7 +33,10 @@ const Home = () => {
         <div className="demo">
           <FlowerComponent className="w-full h-full rounded-lg" />
         </div>
-        {Array.from({ length: 10 }).map((_, index) => (
+        <div className="demo">
+          <BallComponent className="w-full h-full rounded-lg" />
+        </div>
+        {Array.from({ length: 9 }).map((_, index) => (
           <div key={index} className="demo"></div>
         ))}
       </div>
