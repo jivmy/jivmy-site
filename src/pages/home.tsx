@@ -23,6 +23,13 @@ const Home = () => {
     isTouchScrollEnabled: true,
   });
 
+  const { RiveComponent: CatComponent } = useRive({
+    src: "/rive/cat.riv",
+    stateMachines: "squish",
+    autoplay: true,
+    isTouchScrollEnabled: true,
+  });
+
   return (
     <div className="wrapper">
       <h1 className="header">Crafting playful interfaces from New York City</h1>
@@ -36,7 +43,10 @@ const Home = () => {
         <div className="demo">
           <BallComponent className="w-full h-full rounded-lg" />
         </div>
-        {Array.from({ length: 9 }).map((_, index) => (
+        <div className="demo">
+          <CatComponent className="w-full h-full rounded-lg" />
+        </div>
+        {Array.from({ length: 8 }).map((_, index) => (
           <div key={index} className="demo"></div>
         ))}
       </div>
