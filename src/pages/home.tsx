@@ -30,6 +30,13 @@ const Home = () => {
     isTouchScrollEnabled: true,
   });
 
+  const { RiveComponent: SpencerComponent } = useRive({
+    src: "/rive/spencer.riv",
+    stateMachines: "Spencer",
+    autoplay: true,
+    isTouchScrollEnabled: true,
+  });
+
   return (
     <div className="wrapper">
       <h1 className="header">Crafting playful interfaces from New York City</h1>
@@ -46,7 +53,10 @@ const Home = () => {
         <div className="demo">
           <CatComponent className="w-full h-full rounded-lg" />
         </div>
-        {Array.from({ length: 8 }).map((_, index) => (
+        <div className="demo">
+          <SpencerComponent className="w-full h-full rounded-lg" />
+        </div>
+        {Array.from({ length: 7 }).map((_, index) => (
           <div key={index} className="demo"></div>
         ))}
       </div>
