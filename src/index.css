@@ -353,12 +353,30 @@ body::before {
   animation: fadeIn 1.5s ease-out forwards;
 }
 
+.header-text h3 .experience-text {
+  font-weight: 400;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-text h3 {
+    font-size: 1.375rem;  /* 22px */
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h3 {
+    font-size: 1.25rem;   /* 20px */
+    line-height: 1.4;
   }
 }
 
