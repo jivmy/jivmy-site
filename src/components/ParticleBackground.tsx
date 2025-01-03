@@ -13,6 +13,10 @@ const ParticleBackground = () => {
   const particlesRef = useRef<Particle[]>([]);
   const animationFrameRef = useRef<number>();
 
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -22,22 +26,11 @@ const ParticleBackground = () => {
 
     // Calculate particle count based on viewport width
     const getParticleCount = (width: number) => {
-      // Base count of 65 for large screens (>1200px)
       const baseCount = 65;
-      const minCount = 25; // Minimum number of particles
+      const minCount = 25;
       
       if (width > 1200) return baseCount;
-      // Linear scaling between minimum and base count
       return Math.max(minCount, Math.floor(baseCount * (width / 1200)));
-    };
-
-    // Set canvas size
-    const setCanvasSize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      
-      // Reinitialize particles when canvas size changes
-      initParticles();
     };
 
     // Initialize particles
@@ -57,28 +50,41 @@ const ParticleBackground = () => {
       }
     };
 
-    // Animation loop
+    // Set canvas size
+    const setCanvasSize = () => {
+      if (isMobileDevice()) return; // Skip resize on mobile devices
+      
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    };
+
+    // Initial setup
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initParticles();
+
+    // Only add resize listener for non-mobile devices
+    if (!isMobileDevice()) {
+      window.addEventListener('resize', setCanvasSize);
+    }
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const connectionDistance = 150;
 
-      // Update and draw particles
       particlesRef.current.forEach(particle => {
-        // Move particle
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
-        // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(69, 166, 255, 0.15)';
         ctx.fill();
 
-        // Draw connections
         particlesRef.current.forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
@@ -99,12 +105,12 @@ const ParticleBackground = () => {
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    setCanvasSize();
-    window.addEventListener('resize', setCanvasSize);
     animate();
 
     return () => {
-      window.removeEventListener('resize', setCanvasSize);
+      if (!isMobileDevice()) {
+        window.removeEventListener('resize', setCanvasSize);
+      }
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }

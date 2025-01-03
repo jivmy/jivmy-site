@@ -298,8 +298,22 @@
 
 @media (max-width: 480px) {
   .nav-pill {
-    justify-content: flex-center;
+    position: fixed;
+    bottom: var(--space-4);
+    top: unset;
+    left: var(--space-3);
+    right: var(--space-3);
+    transform: none;
+    width: auto;
+    border-radius: 6px;
+    justify-content: center;
     padding: var(--space-3) var(--space-3);
+    gap: var(--space-5);
+  }
+
+  .wrapper {
+    margin-bottom: calc(48px + var(--space-4));
+    margin-top: 0;
   }
 }
 
