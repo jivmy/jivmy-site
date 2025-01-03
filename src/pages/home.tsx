@@ -14,7 +14,7 @@ const Home = () => {
               Jimmy is a Product Designer at <a href="https://spatial.io" className="company-link" target="_blank" rel="noopener noreferrer">Spatial</a>, based in New York City. Previously, at <a href="https://pietrastudio.com" className="company-link" target="_blank" rel="noopener noreferrer">Pietra</a> and stealth startups.
             </h1>
             <h3>
-              <span className="experience-text">4 years of experience</span> in domains like regulatory compliance, metaverse, e-commerce, and SaaS. Love crafting emotive prototypes using tools like After Effects, Rive, and Cursor.
+              <span className="experience-text">4 years of experience</span> in areas like e-commerce, EU regulatory compliance, metaverse, and SaaS. Crafting emotive prototypes using tools like AE, Rive, and Cursor—I'm a prototyper at heart.
             </h3>
           </div>
           
