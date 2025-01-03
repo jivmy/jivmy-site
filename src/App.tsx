@@ -6,6 +6,16 @@ import SelfCustody from './pages/self-custody';
 import DappWorkflow from './pages/dapp-workflow';
 import ParticleBackground from './components/ParticleBackground';
 
+const ScrollToTop = () => {
+  const location = useLocation();
+  
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+};
+
 const ParticleWrapper = () => {
   const location = useLocation();
   const showParticles = location.pathname === '/' || location.pathname === '/about';
@@ -16,6 +26,7 @@ const ParticleWrapper = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <ParticleWrapper />
       <Routes>
         <Route path="/" element={<Home />} />
