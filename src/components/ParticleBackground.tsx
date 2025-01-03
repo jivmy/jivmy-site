@@ -10,6 +10,8 @@ interface Particle {
 
 const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const animationFrameRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -18,36 +20,50 @@ const ParticleBackground = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Calculate particle count based on viewport width
+    const getParticleCount = (width: number) => {
+      // Base count of 65 for large screens (>1200px)
+      const baseCount = 65;
+      const minCount = 25; // Minimum number of particles
+      
+      if (width > 1200) return baseCount;
+      // Linear scaling between minimum and base count
+      return Math.max(minCount, Math.floor(baseCount * (width / 1200)));
+    };
+
     // Set canvas size
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      
+      // Reinitialize particles when canvas size changes
+      initParticles();
     };
-    setCanvasSize();
-    window.addEventListener('resize', setCanvasSize);
 
-    // Create particles
-    const particles: Particle[] = [];
-    const particleCount = 65;
-    const connectionDistance = 150;
-    const particleSpeed = 0.6;
+    // Initialize particles
+    const initParticles = () => {
+      const particleCount = getParticleCount(window.innerWidth);
+      const particleSpeed = 0.6;
+      particlesRef.current = [];
 
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * particleSpeed,
-        vy: (Math.random() - 0.5) * particleSpeed,
-        radius: 4
-      });
-    }
+      for (let i = 0; i < particleCount; i++) {
+        particlesRef.current.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * particleSpeed,
+          vy: (Math.random() - 0.5) * particleSpeed,
+          radius: 4
+        });
+      }
+    };
 
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const connectionDistance = 150;
 
       // Update and draw particles
-      particles.forEach(particle => {
+      particlesRef.current.forEach(particle => {
         // Move particle
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -63,7 +79,7 @@ const ParticleBackground = () => {
         ctx.fill();
 
         // Draw connections
-        particles.forEach(otherParticle => {
+        particlesRef.current.forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -80,13 +96,18 @@ const ParticleBackground = () => {
         });
       });
 
-      requestAnimationFrame(animate);
+      animationFrameRef.current = requestAnimationFrame(animate);
     };
 
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
     animate();
 
     return () => {
       window.removeEventListener('resize', setCanvasSize);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, []);
 

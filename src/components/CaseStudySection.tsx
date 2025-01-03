@@ -10,7 +10,7 @@ const CaseStudySection = ({ title, description }: CaseStudySectionProps) => {
     <section className="case-study-section">
       <div className="section-content">
         <div className="section-text">
-          <h2>{title}</h2>
+          <h1>{title}</h1>
           <p>{description}</p>
         </div>
         <div className="section-visual" />
