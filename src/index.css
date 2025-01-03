@@ -672,6 +672,9 @@ body::before {
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 20px 40px rgba(0, 60, 133, 0.15);
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 .about-text {
