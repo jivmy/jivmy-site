@@ -1,12 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './pages/about';
+import SelfCustody from './pages/self-custody';
+import DappWorkflow from './pages/dapp-workflow';
+import ParticleBackground from './components/ParticleBackground';
+
+const ParticleWrapper = () => {
+  const location = useLocation();
+  const showParticles = location.pathname === '/' || location.pathname === '/about';
+  
+  return showParticles ? <ParticleBackground /> : null;
+};
 
 function App() {
   return (
     <Router>
+      <ParticleWrapper />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/self-custody" element={<SelfCustody />} />
+        <Route path="/dapp-workflow" element={<DappWorkflow />} />
       </Routes>
     </Router>
   );

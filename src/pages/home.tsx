@@ -1,66 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../index.css';
-import { useRive } from '@rive-app/react-canvas';
+import NavPill from '../components/NavPill';
 
 const Home = () => {
-  const { RiveComponent: ButtonComponent } = useRive({
-    src: "/rive/button.riv",
-    stateMachines: "button state",
-    autoplay: true,
-    isTouchScrollEnabled: true,
-  });
-
-  const { RiveComponent: FlowerComponent } = useRive({
-    src: "/rive/flower.riv",
-    stateMachines: "spin",
-    autoplay: true,
-    isTouchScrollEnabled: true,
-  });
-
-  const { RiveComponent: BallComponent } = useRive({
-    src: "/rive/ball.riv",
-    autoplay: true,
-    isTouchScrollEnabled: true,
-  });
-
-  const { RiveComponent: CatComponent } = useRive({
-    src: "/rive/cat.riv",
-    stateMachines: "squish",
-    autoplay: true,
-    isTouchScrollEnabled: true,
-  });
-
-  const { RiveComponent: SpencerComponent } = useRive({
-    src: "/rive/spencer.riv",
-    stateMachines: "Spencer",
-    autoplay: true,
-    isTouchScrollEnabled: true,
-  });
-
   return (
-    <div className="wrapper">
-      <h1 className="header">Crafting playful interfaces from New York City</h1>
-      <div className="demo-grid">
-        <div className="demo">
-          <ButtonComponent className="w-full h-full rounded-lg" />
+    <>
+      <NavPill />
+      <div className="wrapper">
+        <div className="container">
+          <div className="header-text">
+            <h1>
+              Jimmy is a Product Designer at <a href="https://spatial.io" className="company-link" target="_blank" rel="noopener noreferrer">Spatial</a>, based in New York City. Previously, at <a href="https://pietrastudio.com" className="company-link" target="_blank" rel="noopener noreferrer">Pietra</a> and stealth startups.
+            </h1>
+            <h3>
+              Experienced in domains like AI legal compliance, e-commerce, and the metaverse. Love for crafting emotive prototypes using tools like After Effects, Rive, and Cursor.
+            </h3>
+          </div>
+          
+          <div className="projects-grid">
+            <div className="project-card project-featured" />
+            <Link to="/self-custody" className="project-card" />
+            <Link to="/dapp-workflow" className="project-card" />
+          </div>
         </div>
-        <div className="demo">
-          <FlowerComponent className="w-full h-full rounded-lg" />
-        </div>
-        <div className="demo">
-          <BallComponent className="w-full h-full rounded-lg" />
-        </div>
-        <div className="demo">
-          <CatComponent className="w-full h-full rounded-lg" />
-        </div>
-        <div className="demo">
-          <SpencerComponent className="w-full h-full rounded-lg" />
-        </div>
-        {Array.from({ length: 7 }).map((_, index) => (
-          <div key={index} className="demo"></div>
-        ))}
       </div>
-    </div>
+    </>
   );
 };
 
