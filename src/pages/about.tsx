@@ -16,13 +16,13 @@ const About = () => {
             />
             <div className="about-text">
               <p>
-                I design tools that help people take charge of their lives—whether they're building something new, learning a skill, or just trying to make things a little easier. I'm all about making complex systems feel approachable and intuitive, turning technical ideas into experiences that anyone can connect with. I've worked on tools for developers, creators, and everyday users, focusing on bringing innovation to life in a way that feels simple and natural.
+                I build tools that make complex things feel simple and approachable. Whether it's helping developers ship faster or making a novel product click for newcomers, I love turning tricky problems spaces into intuitive experiences.
               </p>
               <p>
-                Outside of work, I'm usually lifting weights or trying out new recipes for friends—it's my favorite way to unwind and connect with people. I'm also a huge fan of audiobooks, especially ones about history or technology, because they help me think differently about the world. When I'm not cooking or reading, you'll find me soaking up the sun on a long walk or exploring national parks. There's something about being in nature that reminds me why balance and simplicity matter so much, both in life and in design.
+                When I'm not designing, you'll find me at the gym, cooking for friends, or exploring national parks. I'm a big audiobook nerd (history and tech are my jam), and there's nothing better than a long walk in the sun to clear my head.
               </p>
               <p>
-                At the end of the day, I want the things I create to feel effortless for the people who use them—whether it's helping a developer build faster or making a complex process feel doable for someone new. I believe good design should feel human, like a tool you've always known how to use.
+                My goal is to create tools that feel natural—like they've always been part of your workflow. I believe the best design is the kind you don't have to think about.
               </p>
             </div>
           </div>
