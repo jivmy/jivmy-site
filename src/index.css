@@ -16,6 +16,7 @@
   --gray-700: #2c2c2c;
   --gray-800: #1a1a1a;
   --gray-900: #0f0f0f;
+  --yellow: rgba(255, 252, 232, 0.15);
 
   --color-text: var(--gray-100);
   --color-background: var(--gray-900);
@@ -57,7 +58,7 @@
 
   .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(255, 236, 153, 0.07);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
   }
 
   .company-link {
@@ -223,7 +224,7 @@
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(255, 236, 153, 0.07);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 .project-featured {
@@ -847,5 +848,5 @@ body::before {
 
 /* Update particle colors in ParticleBackground */
 .ripple-container span {
-  background-color: rgba(255, 236, 153, 0.15);
+  background-color: var(--yellow);
 }
