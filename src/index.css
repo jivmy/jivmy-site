@@ -16,7 +16,7 @@
   --gray-700: #2c2c2c;
   --gray-800: #1a1a1a;
   --gray-900: #0f0f0f;
-  --yellow: rgba(255, 252, 232, 0.05);
+  --yellow: rgba(255, 252, 232, 0.1);
 
   --color-text: var(--gray-100);
   --color-background: var(--gray-900);

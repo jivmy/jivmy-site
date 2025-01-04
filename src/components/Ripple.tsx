@@ -60,7 +60,7 @@ const Ripple: React.FC<RippleProps> = ({ duration = 200 }) => {
             transform: 'scale(0)',
             borderRadius: '100%',
             animation: `ripple ${duration}ms linear`,
-            backgroundColor: 'rgba(255, 236, 153, 0.15)',
+            backgroundColor: 'rgba(255, 252, 232, 0.05)',
             ...ripple
           }}
         />
