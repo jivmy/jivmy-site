@@ -82,7 +82,7 @@ const ParticleBackground = () => {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 252, 232, 0.15)';
+        ctx.fillStyle = 'rgba(255, 252, 232, 0.125)';
         ctx.fill();
 
         particlesRef.current.forEach(otherParticle => {
