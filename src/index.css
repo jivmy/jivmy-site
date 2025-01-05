@@ -43,7 +43,6 @@
     margin: 0;
     background-color: var(--color-background);
     position: relative;
-    min-height: 100vh;
   }
 
   a {
@@ -850,4 +849,16 @@ body::before {
 /* Update particle colors in ParticleBackground */
 .ripple-container span {
   background-color: var(--yellow);
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    margin: 0;
+    padding-bottom: calc(var(--space-6) + 48px);
+  }
+}
+
+/* Add min-height only to pages that need it */
+.min-h-screen {
+  min-height: 100vh;
 }

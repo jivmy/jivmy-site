@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <NavPill />
-      <div className="wrapper">
+      <div className="wrapper min-h-screen">
         <div className="container">
           <div className="header-text">
             <h1>
