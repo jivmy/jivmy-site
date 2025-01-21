@@ -1,18 +1,24 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [settings] = useState({
+    lineHeight: 1.5
+  });
+
   return (
-    <main className="min-h-screen bg-white relative my-2 sm:my-36">
-      {/* Grain Texture */}
+    <main className="min-h-screen bg-white relative my-2 sm:my-8">
       <div className="fixed inset-0 grain"></div>
       
       <div className="relative mx-2 sm:mx-auto w-fit sm:w-full max-w-[85ch] px-6 sm:px-12 py-12 sm:py-24 border border-black/[0.03]">
-        {/* Large decorative number */}
-        <div className="absolute -left-4 sm:-left-24 -top-16 sm:-top-20 text-[12rem] sm:text-[20rem] font-black text-black/[0.03] select-none pointer-events-none">
+        <div 
+          className="absolute -top-16 -right-4 sm:-top-24 sm:left-4 text-[12rem] sm:text-[20rem] font-black text-black/[0.03] select-none pointer-events-none"
+        >
           001
         </div>
                 
-        {/* Article with vertical location */}
         <div className="relative flex gap-12">
-          {/* Location and Date */}
           <div className="hidden lg:block sticky top-6 h-fit space-y-24">
             <span className="vertical-text text-sm tracking-widest text-black/40 uppercase -rotate-180">SoMa</span>
             <div className="flex flex-col items-center gap-2">
@@ -24,8 +30,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Content */}
-          <article className="prose prose-lg flex-1 flex flex-col gap-0 p-0">
+          <article 
+            className="prose prose-lg flex-1 flex flex-col gap-0 p-0"
+            style={{ lineHeight: settings.lineHeight }}
+          >
             <div className="flex flex-col gap-1">
               <span className="text-sm tracking-widest text-black/40 uppercase lg:hidden">SoMa - 11/18/24</span>
             </div>
