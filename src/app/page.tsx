@@ -8,7 +8,7 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
+    <main className="min-h-screen bg-white relative mt-2 sm:mt-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
       <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-16 border border-black/[0.03]">
@@ -34,7 +34,7 @@ export default function Home() {
             className="prose prose-lg flex-1 flex flex-col gap-0 p-0 [&>p]:mb-3 sm:[&>p]:mb-6 [&>p:last-child]:!mb-0"
             style={{ lineHeight: settings.lineHeight }}
           >
-            <div className="flex flex-col gap-1 mb-8">
+            <div className="flex flex-col gap-1 mb-3">
               <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">SoMa - 11/18/24</span>
             </div>
             <p className="!mt-0">SoMa was never in the script. That rough patch of San Francisco felt like stepping into someone else's story, yet I stationed myself there, drawn to discover what it means to push forward while the world crumbles around you. America wasn't my dream—it was my canvas. In 2017, I traded a cushioned life for a one-way ticket to Los Angeles. A bold bet with slim odds, but risk runs in the family. One last ticket west came with no safety net, and that gravity became my compass.</p>
