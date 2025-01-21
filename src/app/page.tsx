@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-white relative mt-2 sm:mt-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
-      <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-16 border border-black/[0.03]">
+      <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-12 sm:py-12 border border-black/[0.03]">
         <div 
           className="absolute -top-12 -right-4 sm:-top-24 sm:-left-24 text-[12rem] sm:text-[20rem] font-black text-black/[0.02] select-none pointer-events-none"
         >
