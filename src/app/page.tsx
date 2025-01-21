@@ -1,12 +1,12 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white relative my-24 sm:my-36">
+    <main className="min-h-screen bg-white relative my-2 sm:my-36">
       {/* Grain Texture */}
       <div className="fixed inset-0 grain"></div>
       
-      <div className="relative w-full max-w-[85ch] mx-auto px-4 sm:px-6 py-12 sm:py-24">
+      <div className="relative mx-2 sm:mx-auto w-fit sm:w-full max-w-[85ch] px-6 sm:px-12 py-12 sm:py-24 border border-black/[0.03]">
         {/* Large decorative number */}
-        <div className="absolute -left-24 -top-12 text-[20rem] font-black text-black/[0.02] select-none pointer-events-none">
+        <div className="absolute -left-4 sm:-left-24 -top-8 sm:-top-12 text-[12rem] sm:text-[20rem] font-black text-black/[0.03] select-none pointer-events-none">
           001
         </div>
                 
@@ -29,7 +29,7 @@ export default function Home() {
             <div className="flex flex-col gap-1">
               <span className="text-sm tracking-widest text-black/40 uppercase lg:hidden">SoMa - 11/18/24</span>
             </div>
-            <p className="!mt-0">Now that I'm home, I'll say my piece. SoMa was never in the script—let alone for the first three years of my twenties. The irony of choosing to live in San Francisco's roughest patch wasn't lost on me; it felt like stepping into someone else's story. But maybe that was the point. I stationed myself there to learn what it means to push forward while the world crumbles, to discover how beauty emerges from chaos. Now, as this chapter closes, I see why that mattered: sometimes you have to break the pattern to find your own.</p>
+            <p className="!mt-0">Now that I'm home, I'll say my piece. SoMa was never in the script—let alone for the first three years of my twenties. In college, living in that rough patch of San Francisco felt like stepping into someone else's story. Yet I stationed myself there, drawn to discover what it means to push forward while the world crumbles around you. Now, seeing the full picture, I understand why. As the curtains fall on this chapter, I stand both ready and uncertain for what comes next.</p>
             <p>America was never my dream—it was my canvas. In 2017, I traded the cushioned life in Richmond—the Atmosphere, the V12, the certainty—for a one-way ticket to Los Angeles. A bold bet with slim odds, but calculated risks run in our blood. We'd moved past 2004's forced hands; this time, the choice was mine. My last ticket west came with no safety net, and though its weight threatened to break me, that gravity became my compass.</p>
             <p>Westwood unfolded like a movie set, with UCLA playing director—making you believe nothing bad could touch you within its frames. Saxon, Hitch, Bruin Plate became more than places; they were chapters in a story I never thought I'd write, woven through nights in Midvale, Kelton, Joshua Tree, and Huntington. The details blur into memory now, but what emerged was crystal clear: a version of myself I hadn't met yet, but desperately needed to become. Design found me there, not through passion initially, but through the necessity of reinvention.</p>
             <p>When COVID hit, I saw my chance. Trading comfort for chaos, I dove into Silicon Valley—not just to design another ambiguous product, but to redesign myself. The American dream morphed into something darker, more personal: a self-imposed crucible. Like an elastic band pulled to its limit, I believed that tension would either break me or launch me forward. Now, standing at the edge of something bigger than I imagined, I hear the horizon's applause mixed with warning bells.</p>
