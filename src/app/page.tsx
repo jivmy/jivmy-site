@@ -8,12 +8,12 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen bg-white relative my-2 sm:my-8">
+    <main className="min-h-screen bg-white relative my-2 sm:my-8 overflow-hidden">
       <div className="fixed inset-0 grain"></div>
       
-      <div className="relative mx-2 sm:mx-auto w-fit sm:w-full max-w-[85ch] px-6 sm:px-12 py-12 sm:py-24 border border-black/[0.03]">
+      <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-6 sm:px-12 py-12 sm:py-24 border border-black/[0.03]">
         <div 
-          className="absolute -top-16 -right-4 sm:-top-24 sm:left-4 text-[12rem] sm:text-[20rem] font-black text-black/[0.03] select-none pointer-events-none"
+          className="absolute -top-16 right-0 sm:-top-24 sm:left-4 text-[12rem] sm:text-[20rem] font-black text-black/[0.03] select-none pointer-events-none"
         >
           001
         </div>
