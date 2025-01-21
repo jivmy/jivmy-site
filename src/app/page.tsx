@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           <article 
-            className="prose prose-lg flex-1 flex flex-col gap-0 p-0 [&>p]:mb-4 sm:[&>p]:mb-8 [&>p:last-child]:!mb-0"
+            className="prose prose-lg flex-1 flex flex-col gap-0 p-0 [&>p]:mb-3 sm:[&>p]:mb-6 [&>p:last-child]:!mb-0"
             style={{ lineHeight: settings.lineHeight }}
           >
             <div className="flex flex-col gap-1 mb-8">
