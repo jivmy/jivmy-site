@@ -1,0 +1,27 @@
+/*
+Font: 		Clari
+Style: 		Regular
+URL: 		https://youworkforthem.com/font/T21990/clari
+Foundry: 	Dipto design
+Foundry: 	https://youworkforthem.com/designer/1871/dipto-design
+Copyright:	Clari
+Version: 	17
+Created:	December 21, 2023
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'ClariRegular';
+	src: url('clari.eot');
+	src: url('clari.eot?#iefix') format('embedded-opentype'),
+             url('clari.woff2') format('woff2'),
+	     url('clari.woff') format('woff'),
+	     url('clari.ttf') format('truetype'),
+	     url('clari.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
