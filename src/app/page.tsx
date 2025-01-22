@@ -3,31 +3,15 @@
 import { useState } from 'react';
 
 export default function Home() {
-  const [settings, setSettings] = useState({
-    lineHeight: 1.5,
-    paragraphSpacing: 2
+  const [settings] = useState({
+    lineHeight: 1.5
   });
 
   return (
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
-      {/* Settings Panel */}
-      <div className="fixed bottom-4 right-4 bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-black/[0.03] shadow-lg z-10">
-        <div className="flex items-center gap-4">
-          <label className="text-sm text-black/40">Spacing</label>
-          <input 
-            type="range" 
-            min="0" 
-            max="8" 
-            value={settings.paragraphSpacing} 
-            onChange={(e) => setSettings(prev => ({ ...prev, paragraphSpacing: parseInt(e.target.value) }))}
-            className="w-24"
-          />
-        </div>
-      </div>
-      
-      <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 border border-black/[0.03]">
+      <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-12 border border-black/[0.03]">
         <div 
           className="absolute -top-12 -right-4 sm:-top-24 sm:-left-24 text-[12rem] sm:text-[20rem] font-black text-black/[0.02] select-none pointer-events-none"
         >
@@ -47,35 +31,21 @@ export default function Home() {
           </div>
 
           <article 
-            className="prose prose-lg flex-1 flex flex-col gap-0 p-0 [&>p:last-child]:!mb-0"
-            style={{ 
-              lineHeight: settings.lineHeight,
-              '--p-spacing': `${settings.paragraphSpacing * 0.25}rem`,
-              '--p-spacing-desktop': `${settings.paragraphSpacing * 0.5}rem`
-            } as React.CSSProperties}
+            className="prose prose-xl flex-1 flex flex-col gap-0 p-0"
+            style={{ lineHeight: settings.lineHeight }}
           >
-            <style jsx>{`
-              article :global(p) {
-                margin-bottom: var(--p-spacing);
-              }
-              @media (min-width: 640px) {
-                article :global(p) {
-                  margin-bottom: var(--p-spacing-desktop);
-                }
-              }
-            `}</style>
             <div className="flex flex-col gap-1 mb-3">
               <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">Woodside - 01/22/25</span>
             </div>
-            <p className="!mt-0">In school, I liked making people laugh more than absorbing information. Actually, I really didn't enjoy learning, and until my sophomore year in high school sat at a healthy C- grade point average. Some part of me felt like it was expected that I would  get good grades, so I didn't out of spite. I never liked the idea of absorbing things that I felt like didn't really matter much, and often felt there was a big difference between actionable information and brain fluff. You know what's actionable information? People thinking you're funny and liking you. You can act on that. But not "hey, remember when this ancient railroad was built." Learning fluff distracts from the main issue: what makes a life that's worth living?</p>
-            <p>I felt that it's not about what you do, and not even about who you become, but rather about who you are becoming. In the very moment. Moving to New York unemployed, to train at a professional boxing gym in the winter cold, after getting laid off in the fall and failing the biggest interview of your life. Oops, that's a slip up. But I'm just here for the plot, playing with this quote: "When you are as small and obscure as David was, you must find a Goliath to attack." So, at this point I might actually move to Barcelona. Two years in Europe sounds like a good way to blow the top off this whole thing. I guess there was never actually a reason for me to be in America. It's all been in my head. Whatever you call it. "The American Dream."</p>
-            <p>At some point in the past, my dream was rooted in success. I thought that if I could crack design like I could crack a joke, I could materialize things that catch people by surprise. And on God, the mouse outside needs to shut up right now. Like bro, I'm trying to write. People want to believe in a fantasy, but also the truth stated in a unexpected way that captures how we all feel. I feel like there's something human about design, ordered, and in that way that blends truth with fantasy. When it's good, it just makes sense. And it makes you feel good about yourself. I mean, I really respect dentists, even though they scare me, because I feel like in a way they're doing the same thing: fighting entropy.</p>
-            <p>Good design inspires. It makes the boring stuff into something magical. I like making things fun. I like making boring things fun. I wanted to succeed because I felt like it mattered for me—not financially but almost spiritually. I never wanted a silver platter. I wanted to fight for something. Something that if I were somehow really good at it, I could make people sparkle like a comedian could. And so even though I totally get why I've lost what I've lost in these past few months, it makes sense. I'm not there yet and that doesn't bother me. I don't actually need to succeed. My dream is not to succeed. My dream is to become.</p>
-            <p>I caught one of the mice in the apartment today. But still, now we're moving down the street, and still I'm running out of time here.  I have about two months and a week before I get deported. So I guess final verdict is yeah, New York weather kind of sucks, but there's a certain beauty to the suffering that people go through here. It seems like everybody is so mad. Like the emoji that's red, with the furrowed eyebrows. Or maybe they're red because it's so cold. But yes, I mean it was good perspective and I told too many people I was coming to not come. And if you're reading this and thinking—oh is he talking to me? Yes. I'm talking to you Sherlock Holmes. I'm getting deported. Spatial invented this horror monkey game in July and it became the biggest VR game in the world. We became a game and our design team got nuked. Animal Company on Meta Quest.</p>
-            <p>Unless things click here soon, I'm going to travel the world and go country to country for the next year or so, somewhere new every few weeks. I'll hit Asia first. Starting with Wuxi, then Cambodia, Laos, Tibet, Vietnam. After, I'll move to Barcelona and lead design at Kalipso. In Europe, I'll hit Paris, Rome, Milan again. Maybe Czech for Spencer.  If I can't find the stability I want, I'll run into the opposite. Who cares about a little bit of rain? I don't need this country, and I'll never need a job. I stayed at Spatial so long out of pure loyalty to Peter. Let him go lead AI at Figma. I'm gonna do my own thing.</p>
-            <p>I think the mouse outside is having a spaz attack because I smoked his friend. Yeah buddy, eat ice. I'm spending my time reading and documenting. Quiet moments, fun and unique events. We packed these months pretty full. Underground wrestling brawl on Saturday. Moving that morning. Winter show soon. I think I'll have this page be somewhat of a public travel journal. And keep my Instagram still for more private aesthetic explorations. I'm still deep in the process. Giving up what I want, in exchange for who I want to become. It's not easy but I'll describe it like this.</p>
-            <p>Imagine your mind is a quiet and still body of water, and bad news hits in the moment: maybe you're sad about something, or maybe hurt about a particular outcome not going your way. Some people try to prevent the boulder from hitting the surface and causing a ripple. That's a big no-no. You have to let the rock pass, and most just do that—they let it pass—and it causes a big splash. What I find helpful is decelerating the velocity of the boulder across a long time horizon. Let it hit you, but don't let it cut too deep. Instead, learn to take the cut wide. It won't hurt any less, but you'll process it better.</p>
-            <p className="!mb-0">Honestly, I'm not sure if I even want to stay in New York. I like living with Spencer, and have enjoyed having so many friends around. I appreciate the Woodside Boxing Academy the struggle it provides to my current context. But there's something a bit draining about this place that's not as acute in California. New York is a bit gloomy in spirit. It feels like a horse that I haven't quite tamed yet. And when I look at it, I'm not sure that I want to tame this horse. It's a little bit ugly, but it has personality. Anyways, I just know things are changing, and fast. In a way, this is what I asked for. I asked for a story and I'm getting a story.</p>
+            <p className="!mt-0 first-letter">In school, I liked making people laugh. More than learning. More than grades. Actually, I really didn't enjoy learning at all, and until my sophomore year in high school sat at a healthy C- grade point average. Some part of me felt like it was expected that I would get good grades, so I didn't out of spite. Like a mouse finding gaps in the walls, I found ways around the system. I never liked absorbing things that didn't really matter, seeing a clear line between actionable information and brain fluff. Making people laugh—that's actionable. You can build on that. Not "hey, remember when this ancient railroad was built." Learning fluff distracts from what matters: a life worth living.</p>
+            <p>It's not about what you do, or even who you become. It's about who you are becoming. Right now. In this moment. Take me: unemployed in New York, training at a professional boxing gym in the winter cold, fresh off getting laid off and bombing the biggest interview of my life. Classic slip-up. But I'm here for the plot, carrying this quote in my pocket: "When you are as small and obscure as David was, you must find Goliath to attack." Maybe that's why Barcelona calls. Two years in Europe might blow the lid off this whole thing. Like that mouse in my apartment—the one I caught today—sometimes you need to know when to leave. I guess there was never actually a reason for me to be in America. It's all been in my head. This thing they call "The American Dream."</p>
+            <p>My dream started with success. I thought if I could crack design like I could crack a joke, I could create things that catch people by surprise. And just like that mouse scratching outside (bro, I'm trying to write here), there's this constant noise in my head about making something meaningful. People want both fantasy and truth—the unexpected way of saying what we all feel. There's something deeply human about design, something ordered that blends truth with fantasy. When it clicks, it just makes sense. Makes you feel good about yourself. Like dentists, who honestly still scare me, we're all fighting entropy in our own way.</p>
+            <p>Good design does more than inspire—it transforms. Makes the mundane magical. Makes the boring burst with life. I wanted success because it felt spiritually necessary, not just financially smart. Never wanted it handed to me. Wanted to fight for it, like that mouse fought for survival. Something that if I got really good at it, I could make people light up like a perfect punchline. So even though I understand why I've lost what I've lost these past few months, it fits. I'm not there yet, and that's fine. Success isn't the dream anymore. Becoming is.</p>
+            <p>The mouse and I, we're both running out of time here. Two months and a week before deportation. Final verdict on New York: the weather sucks, but there's beauty in the collective struggle. Everyone here looks mad as hell. Like that red-faced emoji with furrowed brows. Maybe it's the cold. Maybe it's because we're all searching for something bigger than ourselves. I told too many people I was coming to not show up. And I'm talking directly to you. I'm getting deported. Spatial invented this horror monkey game in July, it blew up into the biggest VR game globally, and our design team got nuked. Animal Company on Meta Quest. Life has its own punchlines.</p>
+            <p>So here's the plan: travel the world, country to country, few weeks at a time. First Asia—Wuxi, Cambodia, Laos, Tibet, Vietnam. Then Barcelona, leading design at Kalipso. Paris, Rome, Milan again. Maybe Czech for Spencer. If stability won't find me, I'll chase its opposite. No need for shelter when you can dance in the rain. I stayed at Spatial out of loyalty to Peter. Let him lead AI at Figma. I'm writing my own story now.</p>
+            <p>That mouse I caught? A metaphor in the flesh. Sometimes you win, sometimes you're the one trapped. I'm spending these days reading, documenting, living. Quiet moments mixed with chaos. Underground wrestling brawls. Moving apartments. <a href="https://thewintershow.org" className="text-black hover:text-black/60 transition-colors duration-200">Winter Show</a> soon. Here liess a public travel journal, while Instagram holds aesthetic explorations. Still, trading what I want for who I'm becoming. It's not easy, but here's how I see it.</p>
+            <p>Picture your mind as still water. Bad news hits—maybe rejection, maybe loss—and most people either try to block the ripples or let them crash wild. But there's another way. Let the stone fall, but control its descent. Like that mouse, learning to move quietly through chaos. Let the impact spread wide instead of deep. The pain doesn't lessen, but you learn to carry it better. You learn to become through it.</p>
+            <p className="!mb-0">Honestly, I'm not sure about New York anymore. Living with Spencer is great, having friends around is better, and Woodside Boxing Academy gives this struggle context. But something here drains you differently than California. New York's got this gloomy spirit, like a wild horse I haven't tamed. Looking at it now, I don't want to. It's ugly in its own way, but it's got character. Like that mouse—persistent, scrappy, always finding a way. Things are changing fast. This is exactly what I asked for. I wanted a story, and now I'm living one. The best punchlines take time to land.</p>
           </article>
         </div>
 
@@ -84,13 +54,6 @@ export default function Home() {
         <div className="corner corner-tr"></div>
         <div className="corner corner-bl"></div>
         <div className="corner corner-br"></div>
-
-        {/* Footer Navigation */}
-        <div className="mt-8 sm:mt-12 flex justify-between items-center text-sm text-black/40">
-          <button className="hover:text-black transition-colors duration-200">← Previous</button>
-          <div className="w-3 h-3 rounded-full border border-black/10"></div>
-          <button className="hover:text-black transition-colors duration-200">Next →</button>
-        </div>
       </div>
     </main>
   );
