@@ -22,7 +22,6 @@ function Note({ number, date, children }: { number: string, date: string, childr
             <span className="text-sm font-light text-black/30">25</span>
           </div>
         </div>
-
         <article 
           className="prose prose-xl flex-1 flex flex-col gap-0 p-0"
           style={{ lineHeight: 1.5 }}
@@ -48,7 +47,7 @@ export default function Home() {
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
       <Note number="002" date="01/23/25">
-        <p className="!mt-0 first-letter">Hauling boxes into the neighbor's house today. One street west, another east. It started with scratching. Then scurrying. Then the sound of thousands—an army moving through the walls, making the bedframe shake at 3 AM. You lie there frozen, listening to their tiny claws on wood and plaster, wondering if this is what madness sounds like.</p>
+        <p className="!mt-0 first-letter">Hauling boxes into the neighbor's house today. One street west, another south. It began with scratching. Then scurrying. Then the sound of thousands—an army moving through the walls, making the bedframe shake at 3 AM. You lie there frozen, listening to their tiny claws on wood and plaster, wondering if this is what madness sounds like.</p>
         <p>We laughed about the absurdity—roaches, rodents, and the police in your living room at  5am. What a trifecta. Behind us, our old apartment stands empty except for the scratching,screeching, and a percussion of small feet marking time in the walls.</p>
         <p className="!mb-0">Our new place has high ceilings, morning light, my kind of mise en scène. No mice, they promise. Best friends since third grade who live in the unit below. I think it'll be fun, and I like how this is evolving into something worth staying for.</p>
       </Note>
