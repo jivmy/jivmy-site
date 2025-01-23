@@ -46,6 +46,12 @@ export default function Home() {
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
+      <Note number="003" date="01/23/25">
+        <p className="!mt-0 first-letter">I've been in such a chaotic state. Every step I take crumbles under my shoes, revealing the next step, and yet I happen to be in a situation where standing still, falling, would bring me to a more ideal state. Going with the tide here, my life would markedly improve. And yet I find it hard to make that decision.</p>
+        <p>I like a little bit of rain. Growing up in Vancouver there was a lot of it. Pebbles of water dripping off Douglas Firs onto black nylon coats. Hot cocoa and dim lighting, warm fuzzy blankets and board games. Now I find myself in this foreign land, fighting for something that, once tangible, now rests an abstract idea.</p>
+        <p className="!mb-0">It's not about money or family. Is it about my ego, then? Do I just hate the idea that my life could be uprooted and thrown away like a rag doll? No, I don't think so. I'm pretty chill. I guess I just like having stories to tell. Life can be so boring, so cold, so route and predictable. What's wrong with a little bit of fun, a little bit of bite? I don't think there's beauty without struggle.</p>
+      </Note>
+
       <Note number="002" date="01/22/25">
         <p className="!mt-0 first-letter">Hauling boxes into the neighbor's house today. One street west, another south. It began with scratching, then scurrying., followed by the sound of thousands—an army moving through the walls, making the bed frame shake at 3 AM. I sat there frozen, listening to their tiny claws on wood and plaster, wondering if this is what madness sounds like.</p>
         <p>We laughed about the absurdity—roaches, rodents, and the police in our living room at 5am. What a trifecta. Behind us, the old apartment stands empty except for the creeking, screeching, and a percussion of small feet marking time in the walls.</p>
