@@ -2,6 +2,13 @@
 
 import { useState } from 'react';
 
+// Import Noto Serif SC font
+const NotoSerifSC = () => (
+  <style jsx global>{`
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+  `}</style>
+);
+
 interface NoteData {
   id: string;
   number: string;
@@ -10,7 +17,7 @@ interface NoteData {
 }
 
 function SeriffText({ children }: { children: React.ReactNode }) {
-  return <span className="font-serif font-bold">{children}</span>;
+  return <span style={{ fontFamily: "'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', STSong, SimSun, serif" }} className="font-bold">{children}</span>;
 } 
 
 function Note({ number, date, children }: { number: string, date: string, children: React.ReactNode }) {
@@ -99,6 +106,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
+      <NotoSerifSC />
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
       {sortedNotes.map((note) => (
