@@ -55,7 +55,7 @@ export default function Home() {
       <Note number="002" date="01/22/25">
         <p className="!mt-0 first-letter">Hauling boxes into the neighbor's house today. One street west, another south. It began with scratching, then scurrying., followed by the sound of thousands—an army moving through the walls, making the bed frame shake at 3 AM. I sat there frozen, listening to their tiny claws on wood and plaster, wondering if this is what madness sounds like.</p>
         <p>We laughed about the absurdity—roaches, rodents, and the police in our living room at 5am. What a trifecta. Behind us, the old apartment stands empty except for the creeking, screeching, and a percussion of small feet marking time in the walls.</p>
-        <p>Our new place has high ceilings, morning light, my kind of mise en scène. No mice, they promise. Best friends since third grade who live in the unit below. I think it'll be fun, and I have a feeling that this could evolve into a place worth fighting for.</p>
+        <p>Our new place has high ceilings, morning light, my kind of mise en scène. No mice, they promise. Best friends since childhood live in the unit below, two girls. I think it'll be fun, and I have a feeling that this could evolve into a place worth fighting for.</p>
       </Note>
 
       <Note number="001" date="01/21/25">
