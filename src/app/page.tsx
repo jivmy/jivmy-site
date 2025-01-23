@@ -54,7 +54,7 @@ export default function Home() {
 
       <Note number="001" date="01/22/25">
         <p className="!mt-0 first-letter">Most nights, I'm at the boxing gym. The sound of gloves hitting bags, the shuffle of feet on the floor, someone calling out, "Keep your hands up." You learn quickly—it's not about avoiding the punches. It's about how you take them. The gym smells like leather and sweat, like determination gone sour. Like dreams getting beaten into shape.</p>
-        <p>If nothing lands, I'll go to Wuxi to visit my mom, then Cambodia, Vietnam, Laos. After that, Barcelona for two years, moving through Europe. Each place a new ring to step into, a new rhythm to learn. The world opens up when you've got nothing left to lose but your balance.</p>
+        <p>If nothing lands, I'll go to Wuxi to visit family, then Cambodia, Vietnam, Laos. After that, Barcelona for two years, moving through Europe. Each place a new ring to step into, a new rhythm to learn. The world opens up when you've got nothing left to lose but your balance.</p>
         <p className="!mb-0">It's gloves tight, feet moving, the ache settling into your arms. In the city, it's the sound of steam rising from manholes, light bending across fire escapes, and small things that remind you of what you don't quite forget. The gym's getting emptier as the night gets deeper. Just the sound of my own breathing now, and the bag swinging like a pendulum, marking time until the next round, the next city, the next life.</p>
       </Note>
     </main>
