@@ -38,7 +38,7 @@
                   <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">Woodside - 01/22/25</span>
                 </div>
                 <p className="!mt-0 first-letter">Most nights, I'm at the boxing gym. The sound of gloves hitting bags, the shuffle of feet on the floor, someone calling out, "Keep your hands up." You learn quickly—it's not about avoiding the punches. It's about how you take them.</p>
-                <p>If nothing lands, I'll go to Wuxi to visit my mom, then Cambodia, Vietnam, Laos. After that, Barcelona for two years, moving through Europe.</p>
+                <p>If nothing connects here, I'll go to Wuxi to visit my family, then Cambodia, Vietnam, Laos. After that, Barcelona for two years, cutting through Europe.</p>
                 <p className="!mb-0">Gloves tight, feet moving, the ache settling into your arms. In the city, it's the sound of steam rising from manholes, light bending across fire escapes, and small things that remind you of what you don't quite forget.</p>
               </article>
             </div>
