@@ -17,7 +17,7 @@ interface NoteData {
 }
 
 function SeriffText({ children }: { children: React.ReactNode }) {
-  return <span style={{ fontFamily: "'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', STSong, SimSun, serif" }} className="font-bold">{children}</span>;
+  return <span style={{ fontFamily: "'Ming Imperial', 'Kaiti SC', 'Kaiti TC', 'DFKai-SB', 'BiauKai', STKaiti, KaiTi, serif" }}>{children}</span>;
 } 
 
 function Note({ number, date, children }: { number: string, date: string, children: React.ReactNode }) {
