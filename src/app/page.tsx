@@ -46,12 +46,6 @@ export default function Home() {
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
-      <Note number="003" date="01/23/25">
-        <p className="!mt-0 first-letter">Cleaned up Instagram in November. Two hundred followers gone, kept twenty-five. Just real friends and family now. Some artists whose work I actually care about. Feed's quieter. No more scrolling through lives I used to know.</p>
-        <p>Summer in New York hits different. Everything was golden then—long days, rooftop sunsets, endless possibility. Now it's all grey scale and survival. But maybe that's more honest. Winter strips away the pretty lies, leaves you with what's real.</p>
-        <p className="!mb-0">At the gym, between rounds, watching guys who've been here for years. They don't dodge the hard hits anymore. Just plant their feet and work through it. Starting to get why. Some lessons you can only learn by staying in the fight.</p>
-      </Note>
-
       <Note number="002" date="01/22/25">
         <p className="!mt-0 first-letter">Hauling boxes into the neighbor's house today. One street west, another south. It began with scratching, then scurrying., followed by the sound of thousands—an army moving through the walls, making the bed frame shake at 3 AM. I sat there frozen, listening to their tiny claws on wood and plaster, wondering if this is what madness sounds like.</p>
         <p>We laughed about the absurdity—roaches, rodents, and the police in our living room at 5am. What a trifecta. Behind us, the old apartment stands empty except for the creeking, screeching, and a percussion of small feet marking time in the walls.</p>
