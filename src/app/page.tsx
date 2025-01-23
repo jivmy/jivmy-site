@@ -15,11 +15,12 @@ function Note({ number, date, children }: { number: string, date: string, childr
         <div className="hidden lg:block sticky top-8 h-fit space-y-20">
           <span className="vertical-text text-sm tracking-[0.2em] text-black/40 uppercase -rotate-180">New York City</span>
           <div className="flex flex-col items-center gap-3">
-            <span className="text-sm font-light text-black/30">01</span>
-            <div className="w-px h-10 bg-black/10"></div>
-            <span className="text-sm font-light text-black/30">22</span>
-            <div className="w-px h-10 bg-black/10"></div>
-            <span className="text-sm font-light text-black/30">25</span>
+            {[23, 22, 21].map((day) => (
+              <>
+                <span className="text-sm font-light text-black/30">{day}</span>
+                {day > 21 && <div className="w-px h-10 bg-black/10"></div>}
+              </>
+            ))}
           </div>
         </div>
         <article 
@@ -42,27 +43,21 @@ function Note({ number, date, children }: { number: string, date: string, childr
 }
 
 export default function Home() {
+  const entries = [
+    { number: "003", date: "01/23/25", content: /* ... your content ... */ },
+    { number: "002", date: "01/22/25", content: /* ... your content ... */ },
+    { number: "001", date: "01/21/25", content: /* ... your content ... */ }
+  ];
+
   return (
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
-      <Note number="003" date="01/23/25">
-        <p className="!mt-0 first-letter">I've been in such a chaotic state. Every step I take crumbles under my shoes, revealing the next step, and yet I happen to be in a situation where standing still, falling, would bring me to a more ideal state. Going with the tide here, my life would markedly improve. And yet I find it hard to make that decision.</p>
-        <p>I like a little bit of rain. Growing up in Vancouver there was a lot of it. Pebbles of water dripping off Douglas Firs onto black nylon coats. Hot cocoa and dim lighting, warm fuzzy blankets and board games. Now I find myself in this foreign land, fighting for something that, once tangible, now rests an abstract idea.</p>
-        <p className="!mb-0">It's not about money or family. Is it about my ego, then? Do I just hate the idea that my life could be uprooted and thrown away like a rag doll? No, I don't think so. I'm pretty chill. I guess I just like having stories to tell. Life can be so boring, so cold, so rote and predictable. What's wrong with a little bit of fun, a little bit of bite? I don't think there's beauty without struggle.</p>
-      </Note>
-
-      <Note number="002" date="01/22/25">
-        <p className="!mt-0 first-letter">Hauling boxes into the neighbor's house today. One street west, another south. It began with scratching, then scurrying., followed by the sound of thousands—an army moving through the walls, making the bed frame shake at 3 AM. I sat there frozen, listening to their tiny claws on wood and plaster, wondering if this is what madness sounds like.</p>
-        <p>We laughed about the absurdity—roaches, rodents, and the police in our living room at 5am. What a trifecta. Behind us, the old apartment stands empty except for the creaking, screeching, and a percussion of small feet marking time in the walls.</p>
-        <p>Our new place has high ceilings, morning light, my kind of mise en scène. No mice, they promise. Best friends since third grade who live in the unit below. I think it'll be fun, and I have a good feeling that this could evolve into something worth staying for.</p>
-      </Note>
-
-      <Note number="001" date="01/21/25">
-        <p className="!mt-0 first-letter">Most nights, I'm in the basement. Gloves hitting bags, the shuffle of feet on the floor, someone calling out, "Keep your hands up." You learn it's not about avoiding every punch. It's about choosing how to take them. So much leather and sweat, like determination and sour. Dreams getting beaten into shape.</p>
-        <p>If no shots land here, I'll go to Wuxi to visit family, then Cambodia, Vietnam, Laos, Tibet. And then Barcelona for a couple years, moving through Europe. Stability won't be my friend, so I'll find gratitude in adventure. I'll make the  open up. Nothing left to lose but my balance.</p>
-        <p className="!mb-0">Gloves tight, feet moving, steady rhythm, an ache settling into your arms. In the city, steam rises from manholes, light bends across fire escapes, and glimpses on the subway reminds of what I can't quite forget. Men shuffle out as the night deepens. Now only the sound of my own breathing, and the bag swinging like a pendulum, marking my time here.</p>
-      </Note>
+      {entries.map(({ number, date, content }) => (
+        <Note key={number} number={number} date={date}>
+          {content}
+        </Note>
+      ))}
     </main>
   );
 }
