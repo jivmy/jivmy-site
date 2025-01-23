@@ -25,7 +25,7 @@ const notes: NoteData[] = [
     number: '001',
     date: '01/21/25',
     content: [
-      "Most nights, I'm in their basement—gloves hitting bags, the shuffle of feet on the floor, Charlie calling out, \"Keep your hands up!\" You soon learn it's not about avoiding every punch. It's about choosing when to take them, moving to absorb the impact.",
+      "Most nights, I'm in their basement—gloves striking  bags, a shuffle of feet on the floor, Charlie calling out, \"Keep your hands up!\" You soon learn it's not about avoiding every punch. It's about choosing when to take them, moving to absorb the impact.",
       "If no shots land here, I'll travel to Wuxi and visit family, then Cambodia, Vietnam, Laos, Tibet. And then Barcelona for a couple years, cutting across Europe. Stability doesn't want to be my friend, so I'll find gratitude in adventure, and make the world open up for me. Pain is what makes life fun—it's what makes the story.",
       "Guard tight, feet light, steady pace, an ache that burns. In the city, steam rises from manholes, light bends across fire escapes, and cats shuffle out of the winter cold. I hear my own breathing, and the bag swinging like a pendulum."
     ]
