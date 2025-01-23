@@ -43,6 +43,10 @@ const notes: NoteData[] = [
 ];
 
 function Note({ number, date, children }: { number: string, date: string, children: React.ReactNode }) {
+  // Extract date parts (assuming date format is MM/DD/YY)
+  const [month, day, year] = date.split('/');
+  console.log(`Note ${number} - Date: ${date}, Parts: month=${month}, day=${day}, year=${year}`);
+
   return (
     <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-12 border border-black/[0.03] mb-12">
       <div 
@@ -55,11 +59,11 @@ function Note({ number, date, children }: { number: string, date: string, childr
         <div className="hidden lg:block sticky top-8 h-fit space-y-20">
           <span className="vertical-text text-sm tracking-[0.2em] text-black/40 uppercase -rotate-180">New York City</span>
           <div className="flex flex-col items-center gap-3">
-            <span className="text-sm font-light text-black/30">01</span>
+            <span className="text-sm font-light text-black/30">{month}</span>
             <div className="w-px h-10 bg-black/10"></div>
-            <span className="text-sm font-light text-black/30">22</span>
+            <span className="text-sm font-light text-black/30">{day}</span>
             <div className="w-px h-10 bg-black/10"></div>
-            <span className="text-sm font-light text-black/30">25</span>
+            <span className="text-sm font-light text-black/30">{year}</span>
           </div>
         </div>
         <article 
@@ -82,11 +86,18 @@ function Note({ number, date, children }: { number: string, date: string, childr
 }
 
 export default function Home() {
+  // Sort notes by date in ascending order
+  const sortedNotes = [...notes].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
+
   return (
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
-      {notes.map((note) => (
+      {sortedNotes.map((note) => (
         <Note key={note.id} number={note.number} date={note.date}>
           {note.content.map((paragraph, index) => (
             <p key={index} className={`${index === 0 ? '!mt-0 first-letter' : ''} ${index === note.content.length - 1 ? '!mb-0' : ''}`}>
