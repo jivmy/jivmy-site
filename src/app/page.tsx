@@ -48,7 +48,7 @@ export default function Home() {
       
       <Note number="003" date="01/23/25">
         <p className="!mt-0 first-letter">I've been in such a chaotic state. Every step I take crumbles into sawdust, revealing the next step, and yet I happen to be in a situation where standing still, falling, would bring me to a more ideal state. Going with the tide here, my life would markedly improve. And yet I find it hard to make that decision.</p>
-        <p>I like a little bit of rain. Growing up in Vancouver there was a lot of it. Pebbles of water dripping off Douglas Firs onto black nylon coats. Hot cocoa and dim lighting, warm fuzzy blankets and board games. Now I find myself in this foreign land, fighting for something that, once tangible, now rests an abstract idea.</p>
+        <p>Nothing wrong with a little bit of rain. Growing up in Vancouver there was a lot of it. Pebbles of water dripping off Douglas Firs onto black nylon coats. Hot cocoa and dim lighting, warm fuzzy blankets and board games. Now I find myself in this foreign land, fighting for something that, once tangible, now rests an abstract idea.</p>
         <p className="!mb-0">It's not about money or family. Is it about my ego, then? Do I just hate the idea that my life could be uprooted and thrown away like a rag doll? No, I don't think so. I'm pretty chill. I guess I just like having stories to tell. Life can be so boring, so cold, so route and predictable. What's wrong with a little bit of fun, a little bit of bite? I don't think there's beauty without struggle.</p>
       </Note>
 
@@ -60,7 +60,7 @@ export default function Home() {
 
       <Note number="001" date="01/21/25">
         <p className="!mt-0 first-letter">Most nights, I'm in the basement. Gloves hitting bags, the shuffle of feet on the floor, someone calling out, "Keep your hands up." You learn it's not about avoiding every punch. It's about choosing how to take them. So much leather and sweat, like determination and sour. Dreams getting beaten into shape.</p>
-        <p>If no shots land here, I'll go to Wuxi to visit family, then Cambodia, Vietnam, Laos, Tibet. And then Barcelona for a couple years, moving through Europe. Stability won't find me, so I'll dance in the rain. I see the world opens up when you've got nothing left to lose but your balance.</p>
+        <p>If no shots land here, I'll go to Wuxi to visit family, then Cambodia, Vietnam, Laos, Tibet. And then Barcelona for a couple years, moving through Europe. Stability won't find me, so I'll find gratitude in adventure. I'll make world open up. Nothing left to lose but my balance.</p>
         <p className="!mb-0">Gloves tight, feet moving, steady rhythm, an ache settling into your arms. In the city, steam rises from manholes, light bends across fire escapes, and glimpses on the subway reminds of what I can't quite forget. Men shuffle out as the night deepens. Now only the sound of my own breathing, and the bag swinging like a pendulum, marking my time here.</p>
       </Note>
     </main>
