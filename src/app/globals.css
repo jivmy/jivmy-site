@@ -34,15 +34,26 @@ body {
 
 .first-letter:first-letter {
   float: left;
-  font-size: 5em;
+  font-size: 3.5em;
   line-height: 0.8;
   padding: 0.1em 0.15em;
   margin: 0.1em 0.2em 0 0;
   font-weight: 900;
-  background: linear-gradient(to bottom, rgba(23, 23, 23, 0.95), rgba(23, 23, 23, 0.75));
+  background: linear-gradient(135deg, 
+    rgba(23, 23, 23, 1) 0%,
+    rgba(23, 23, 23, 0.8) 50%,
+    rgba(23, 23, 23, 0.6) 100%
+  );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+@media (min-width: 640px) {
+  .first-letter:first-letter {
+    font-size: 5em;
+  }
 }
 
 /* Paragraph Styles */
