@@ -60,7 +60,7 @@ export default function Home() {
 
       <Note number="001" date="01/21/25">
         <p className="!mt-0 first-letter">Most nights, I'm in the basement. Gloves hitting bags, the shuffle of feet on the floor, someone calling out, "Keep your hands up." You learn quickly—it's not about avoiding every punch. It's about choosing how to take them. So much leather and sweat, like determination and sour. Like dreams getting beaten into shape.</p>
-        <p>If no shots land here, I'll go to Wuxi to visit family, then Cambodia, Vietnam, Laos. After that, Barcelona for a few years, moving through Europe. Each land a new ring to step into, a new rhythm to learn. I guess world opens up when you've got nothing left to lose but your balance.</p>
+        <p>If no shots land here, I'll go to Wuxi to visit family, then Cambodia, Vietnam, Laos. After that, Barcelona for a couple years, moving through Europe. Each land a new ring to step into, a new rhythm to learn. I guess world opens up when you've got nothing left to lose but your balance.</p>
         <p className="!mb-0">Gloves tight, feet moving, steady rhythm, an ache settling into your arms. In the city, steam rises from manholes, light bends across fire escapes, and glimpses on the subway reminds of what I can't quite forget. Men shuffle out as the night deepens. Now only the sound of my own breathing, and the bag swinging like a pendulum, marking my time here.</p>
       </Note>
     </main>
