@@ -47,7 +47,7 @@ export default function Home() {
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
       <Note number="003" date="01/23/25">
-        <p className="!mt-0 first-letter">I've been in such a chaotic state. Every step I take crumbles into sawdust, revealing the next, and yet I happen to be in a situation where standing still and falling would bring me to an ideal state. Letting go to the tide, my life would markedly improve. And yet I find it hard to make that decision, for reasons I don't understand.</p>
+        <p className="!mt-0 first-letter">I've been in such a chaotic state. Every step I take crumbles into sawdust, revealing the next, and yet I happen to be in a situation where standing still and falling would bring me to an ideal state. Letting go, my life would markedly improve. And yet I find it hard to make that decision, for reasons I don't understand.</p>
         <p>Nothing wrong with a little bit of rain and cold. Growing up in Vancouver there was a bucket of it. Pebbles of water dripping off Douglas Firs onto black nylon coats. Hot cocoa and dim lighting, warm fuzzy blankets and board games. Now I find myself in this foreign land, fighting for something that, once tangible, now rests an abstract idea.</p>
         <p className="!mb-0">It's not about money or family. Is it about ego, then? Am I averse to the idea that my life could be uprooted and thrown away like a rag doll? No, I don't think so. I'm pretty chill. I guess I just like having stories to tell. Life can be so boring, so route and predictable. What's wrong with a little bit of fun, a little bit of bite back? I don't think there's beauty without struggle.</p>
       </Note>
