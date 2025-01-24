@@ -65,9 +65,21 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
+    id: '005',
+    number: '005',
+    date: '01/24/25',
+    location: 'New York City',
+    content: [
+      "Some part of me feels like life is shorter than we feel it is. Look at how fast time flies. It's already January; I remember when this time felt so far away, and now it's here. We're kind of all just drifting through it, clinging on to any possibility of permanence or stability with dear life. It's easy to say \"oh now is not the right time for this,\" or \"if I do this now, in the future I'll be able to have this.\" But none of us know that. We ignore what we really want out of a degree of indecisiveness, or fear that if we were to ask for it, we'd be confronted by both our own and life's limitations.",
+      "At the same time, there's a degree of truth rooted in our doubts about our dreams. I don't believe in ghosts, but it's almost always true. It's never really the right timing, and we can never have everything we want. In these days, it seems like we dedicate our lives to a craft and see it wiped away by a machine in a matter of months. Part of me wants to step away from it all—the call of adventure—buy a house, and just chill out for the rest of my life.",
+      "In a way I feel like I'm addicted to the plot. I'm attached to living a life that has ups and down in different places. I grew up on the final level of the map, and I've started fresh to try to get back there, just to make the story interesting. I know that moving to Spain is in itself a huge decision that I'll have to sacrifice even more for. I am scared, and I will do it. Because I recognize that it opens up the possibility of my life even more, even though it closes any chance of many other things I also want.",
+      "I don't really know how to describe this emotion as I close out a decade long chapter. It's a mix of anticipation, fear, longing, nostalgia, and determination. It feels human, in an adult world where we're all just trying to figure it out, balance what we think is right with what we want."
+    ]
+  },
+  {
     id: '004',
     number: '004',
-    date: '01/24/25',
+    date: '01/23/25',
     location: 'New York City',
     content: [
       "In the dark with the building's usual noises, but this is no usual noise. There's a crow in the boiler room. It's about the size of a raccoon. Not sure what it's doing there, or how it got there, and I don't exactly know how to get it out. So, we're leaving. Packing up and heading down the street.",
@@ -78,7 +90,7 @@ const notes: NoteData[] = [
   {
     id: '003',
     number: '003',
-    date: '01/23/25',
+    date: '01/22/25',
     location: 'New York City',
     content: [
       "Hello and welcome to my comprehensive list of the top five vegetables on planet earth. Number five we have Garlic. It's such an important vegetable because it pairs well with so many other non-vegetables. It's like that friend who fits in all of your friend groups (me). But it's too general to take the spot of any of the other heavy hitters.",
@@ -89,7 +101,7 @@ const notes: NoteData[] = [
   {
     id: '002',
     number: '002',
-    date: '01/22/25',
+    date: '01/21/25',
     location: 'New York City',
     content: [
       "I didn't think I could top Suno or Apple Human Interface. When those fell through, although it made sense, a part of me felt like I was on a slippery path to nothing. But yet again, it seems I've come out on top with something better, but still, just a chance to shoot on goal. Yet with this bullet in the chamber, I'm bringing with me a big metal bat too, and even more dangerous, my signature positive attitude.",
@@ -100,7 +112,7 @@ const notes: NoteData[] = [
   {
     id: '001',
     number: '001',
-    date: '01/21/25',
+    date: '01/20/25',
     location: 'New York City',
     content: [
       "Most nights, I'm in their basement—hands on the heavy bag, a shuffle of feet on the floor, Charlie calling out, \"Keep your hands up!\" You soon learn it's not about avoiding every punch: it's about seeing when to take them, how to absorb the impact.",
