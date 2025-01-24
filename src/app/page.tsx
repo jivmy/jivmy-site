@@ -65,32 +65,22 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
-    id: '005',
-    number: '005',
+    id: '004',
+    number: '004',
     date: '01/24/25',
     location: 'New York City',
     content: [
-      "Some part of me feels like life is shorter than we feel it is. Look at how fast time flies. It's nearing February, and I remember when this time felt so far away. Now, it's here. We're kind of all just drifting through it, clinging on to any possibility of permanence or stability for dear life. It's easy to say \"oh now is not the right time for this,\" or \"if I do this now, in the future I'll be able to have this.\" None of us know that, and we ignore what we really want out of a degree of indecisiveness, or fear that if we were to ask for it, we'd be confronted by both our own and life's many limitations on our desires.",
-      "At the same time, there's a degree of truth rooted in our doubts about our dreams. I don't believe in ghosts, but it's never really the right timing, it's true, and we can never have everything we want. In these days, it seems like we give our years to a craft and see it wiped away by a machine in a matter of months. Part of me wants to step away from it all—the call of adventure—lift a house, and just chill out for the rest of my time here.",
+      "Some part of me feels like life is short. Look at how fast time flies. It's nearing February, and I remember when this time felt so far away. Now, it's here. We're all kind of just drifting through it, clinging on to any possibility of permanence or stability for dear life. It's easy to say \"oh now is not the right time for this,\" or \"if I do this now, in the future I'll be able to have this.\" None of us know that, and we ignore our hearts out of a degree of indecisiveness, or fear that if we were to ask for what we want, we'd face both our own and life's many limitations.",
+      "At the same time, there's a degree of truth rooted in our doubts about our dreams. I don't believe in ghosts, but it's never really the right timing, it's true, and we can never have everything we want. In these days, it seems like we give our years to a craft and see it wiped away by a machine in a matter of months. Some parts of me yearn to step away from it all—the call of adventure—lift a house, and just chill out for the rest of my time here. I'm not ready for that yet.",
       "In a way I feel like I'm addicted to the plot. I'm attached to living a life that has ups and down in different areas. I grew up on the final level of the map, and I've started fresh to try to get back there, just to make the story interesting. I know that moving to Spain is in itself a huge decision that I'll have to sacrifice even more for. I am scared... and I will do it. It opens up the possibility of my life, even though it closes any chance of many other things I also want.",
-      "Closing out this decade long chapter, I'm sitting with a cocktail of anticipation, fear, longing, nostalgia, and determination. It feels very human, in an adult world where we're all just trying to figure it out, balance what we think is right with what we yearn for.",
-      ]
-  },
-  {
-    id: '004',
-    number: '004',
-    date: '01/23/25',
-    location: 'New York City',
-    content: [
-      "In the dark with the building's usual noises, but this is no usual noise. There's a crow in the boiler room. It's about the size of a raccoon. Not sure what it's doing there, or how it got there, and I don't exactly know how to get it out. So, we're leaving. Packing up and heading down the street.",
-      "April isn't far off anymore—and as time passes here I'm learning that... I don't like New York. I'm not in love with it like I was with California. The people have been fun, but I don't like living here day-to-day. Glad to know. It's not like I could have predicted this outcome, but it seems that I'm headed to Spain for the next few years. I don't speak Spanish—I took French. My time in America comes to a close. At least for now.",
-      "I'm so happy to have spent such quality time here and to have met such unique and soulful people. I'm grateful, and humbled by my friends, and for the opportunity to push myself a little bit here. And I am so, so excited for Barcelona coming. I'm not in love with the aesthetic of the rat-race here. Just not my thing."
+      "Saying goodbye to this decade long chapter, I'm sitting with a cocktail of anticipation, fear, longing, nostalgia, and determination. It feels very human, in an adult world where we're all just trying to figure it out, balance what we think is right with what we dream about when the lights go out and before the birds chirp.",
+      "I have let some people down, and I have raised more up. I have said no to some things, and yes to more. I have seen both sides of luck, and I have told jokes that have made others laugh until they can't breathe and their bellies belly hurt. I have seen more than most, and have lost more than most. Through it all, I have become a better person: more steady, more confident, more certain that if the world were to crumble, I would remain stable."
     ]
   },
   {
     id: '003',
     number: '003',
-    date: '01/22/25',
+    date: '01/23/25',
     location: 'New York City',
     content: [
       "Hello and welcome to my comprehensive list of the top five vegetables on planet earth. Number five we have Garlic. It's such an important vegetable because it pairs well with so many other non-vegetables. It's like that friend who fits in all of your friend groups (me). But it's too general to take the spot of any of the other heavy hitters.",
@@ -101,7 +91,7 @@ const notes: NoteData[] = [
   {
     id: '002',
     number: '002',
-    date: '01/21/25',
+    date: '01/22/25',
     location: 'New York City',
     content: [
       "I didn't think I could top Suno or Apple Human Interface. When those fell through, although it made sense, a part of me felt like I was on a slippery path to nothing. But yet again, it seems I've come out on top with something better, but still, just a chance to shoot on goal. Yet with this bullet in the chamber, I'm bringing with me a big metal bat too, and even more dangerous, my signature positive attitude.",
@@ -112,7 +102,7 @@ const notes: NoteData[] = [
   {
     id: '001',
     number: '001',
-    date: '01/20/25',
+    date: '01/21/25',
     location: 'New York City',
     content: [
       "Most nights, I'm in their basement—hands on the heavy bag, a shuffle of feet on the floor, Charlie calling out, \"Keep your hands up!\" You soon learn it's not about avoiding every punch: it's about seeing when to take them, how to absorb the impact.",
