@@ -13,6 +13,7 @@ interface NoteData {
   id: string;
   number: string;
   date: string;
+  location: string;
   content: (string | (string | JSX.Element)[])[];
 }
 
@@ -20,7 +21,7 @@ function SeriffText({ children }: { children: React.ReactNode }) {
   return <span style={{ fontFamily: "'Ming Imperial', 'Kaiti SC', 'Kaiti TC', 'DFKai-SB', 'BiauKai', STKaiti, KaiTi, serif" }}>{children}</span>;
 } 
 
-function Note({ number, date, children }: { number: string, date: string, children: React.ReactNode }) {
+function Note({ number, date, location, children }: { number: string, date: string, location: string, children: React.ReactNode }) {
   // Extract date parts (assuming date format is MM/DD/YY)
   const [month, day, year] = date.split('/');
 
@@ -34,6 +35,7 @@ function Note({ number, date, children }: { number: string, date: string, childr
               
       <div className="relative flex gap-16">
         <div className="hidden lg:block sticky top-8 h-fit space-y-20">
+          <span className="vertical-text text-sm tracking-[0.2em] text-black/40 uppercase -rotate-180">{location}</span>
           <div className="flex flex-col items-center gap-3">
             <span className="text-sm font-light text-black/30">{month}</span>
             <div className="w-px h-10 bg-black/10"></div>
@@ -47,7 +49,7 @@ function Note({ number, date, children }: { number: string, date: string, childr
           style={{ lineHeight: 1.5 }}
         >
           <div className="flex flex-col gap-1 mb-3">
-            <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">{date}</span>
+            <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">{location} - {date}</span>
           </div>
           {children}
         </article>
@@ -66,16 +68,18 @@ const notes: NoteData[] = [
     id: '004',
     number: '004',
     date: '01/24/25',
+    location: 'New York City',
     content: [
       "Sitting in the dark, listening to the building's usual noises, but this is no usual noise. There's a crow in the boiler room. It's about the size of a raccoon. Not sure what it's doing there, or how it got there, and I don't exactly know how to get it out. So, we're leaving. Just like that—packing up and heading down the street.",
-      "April isn't far anymore—and as time passes here I'm learning that... I don't like New York. Or at least I'm not in love with it like I was with California. Sure, the people have been fun, but I just don't like living here, day-to-day. I like nature. Oops, glad to know. I mean it's not like I even could have predicted this outcome, but it seems like I'm seriously headed to Spain for the next few years. I don't even speak Spanish—I took French. And so just like that, my chapter in America comes to a close. For now, at least. Unless I hit that Goliath next week, but even then it's back around to Mountain View.",
-      "I just want to say that I'm so happy to have spent such quality time here and to have met such unique and soulful people. I'm grateful, and humbled by my friends, and for the opportunity to push myself a little bit here. But I am so, so mega excited for what's coming. Honestly, I just don't love the aesthetic of the rat-race here. It's a greasy Wall Street slime-vibe of working 60 hours a week for a couple hundred thousand dollars, that is in a way so yucky."
+      "March isn't far off anymore—and as time passes here I'm learning that... I don't like New York. Or at least I'm not in love with it like I was with California. Sure, the people have been fun, but I just don't like living here, day-to-day. Oops, glad to know. I mean it's not like even I could have predicted this outcome, but it seems like I'm seriously headed to Spain for the next few years. I don't even speak Spanish—I took French. And so just like that, my chapter in America comes to a close. For now, at least. Unless I hit that Goliath next week, but even then it's back around to Mountain View.",
+      "I just want to say that I'm so happy to have spent such quality time here and to have met such unique and soulful people. I'm grateful, and humbled by my friends, and for the opportunity to push myself a little bit here. But I am so, so excited for what's coming. Honestly, I just don't love the aesthetic of the rat-race here. It's a greasy Wall Street slime-vibe of working 60 hours a week for a couple hundred thousand dollars, that is in a way so yucky and dystopian."
     ]
   },
   {
     id: '003',
     number: '003',
     date: '01/23/25',
+    location: 'New York City',
     content: [
       "Hello and welcome to my comprehensive list of the top five vegetables on planet earth. Number five we have Garlic. It's such an important vegetable because it pairs well with so many other non-vegetables. It's like that friend who fits in all of your friend groups (me). But it's too general to take the spot of any of the other heavy hitters.",
       "At number four, we have Enoki Mushrooms. I know they're technically a fungi (me) but you sauté these silly little critters in some butter with pepper, pistachios, and white fish—your heart will melt. Next we have Squash. Imagine you're lost in some dark forest everywhere and you finally get out after being stranded for three weeks. Someone comes up to you and gives you two plates of food—you can pick one. In one bowl, you have squash stew. In the other bowl, you have an American spring mix salad...",
@@ -86,6 +90,7 @@ const notes: NoteData[] = [
     id: '002',
     number: '002',
     date: '01/22/25',
+    location: 'New York City',
     content: [
       "I didn't think I could top Suno or Apple Human Interface. When those fell through, although it made sense, a part of me felt like I was on a slippery path to nothing. But yet again, it seems I've come out on top with something better, but still, just a chance to shoot on goal. Yet with this bullet in the chamber, I'm bringing with me a big metal bat too, and even more dangerous, my signature positive attitude.",
       "In recognizing the silliness of \"success,\" what people think it is versus what it is in reality, I've found peace. We're always chasing something: love, career, a feeling. But living well is not like that at all, it's about forgetting what you're chasing and allowing yourself to run for the fun of it. You like running, don't you? Trick question. I know you don't. But, you like the feeling after. And that's what I've been doing, trying to maximize that feeling after. If you can live in that state, I think it's success.",
@@ -96,6 +101,7 @@ const notes: NoteData[] = [
     id: '001',
     number: '001',
     date: '01/21/25',
+    location: 'New York City',
     content: [
       "Most nights, I'm in their basement—hands on the heavy bag, a shuffle of feet on the floor, Charlie calling out, \"Keep your hands up!\" You soon learn it's not about avoiding every punch: it's about seeing when to take them, how to absorb the impact.",
       "If no shots land here, I'll travel to Wuxi and visit family, then Cambodia, Vietnam, Laos, Tibet. And then Barcelona for a couple years, cutting across Europe. Guard tight, feet light, steady pace, an ache that burns. In the city, steam rises from manholes, light bends across fire escapes, and cats shuffle out of the winter cold. I hear my own breathing, and the bag swinging like a pendulum.",
@@ -118,7 +124,7 @@ export default function Home() {
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
       {sortedNotes.map((note) => (
-        <Note key={note.id} number={note.number} date={note.date}>
+        <Note key={note.id} number={note.number} date={note.date} location={note.location}>
           {note.content.map((paragraph, index) => (
             <p key={index} className={`${index === 0 ? '!mt-0 first-letter' : ''} ${index === note.content.length - 1 ? '!mb-0' : ''}`}>
               {Array.isArray(paragraph) ? paragraph : paragraph}
