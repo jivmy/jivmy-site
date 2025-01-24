@@ -70,7 +70,7 @@ const notes: NoteData[] = [
     date: '01/24/25',
     location: 'New York City',
     content: [
-      "Sitting in the dark with the building's usual noises, but this is no usual noise. There's a crow in the boiler room. It's about the size of a raccoon. Not sure what it's doing there, or how it got there, and I don't exactly know how to get it out. So, we're leaving. Just like that—packing up and heading down the street.",
+      "In the dark with the building's usual noises, but this is no usual noise. There's a crow in the boiler room. It's about the size of a raccoon. Not sure what it's doing there, or how it got there, and I don't exactly know how to get it out. So, we're leaving. Just like that—packing up and heading down the street.",
       "April isn't far off anymore—and as time passes here I'm learning that... I don't like New York. Or at least I'm not in love with it like I was with California. Sure, the people have been fun, but I just don't like living here, day-to-day. Oops, glad to know. I mean it's not like I could have predicted this outcome, but it seems like I'm headed to Spain for the next few years. I don't speak Spanish—I took French. Like that, my chapter in America comes to a close. At least for now.",
       "I just want to say that I'm so happy to have spent such quality time here and to have met such unique and soulful people. I'm grateful, and humbled by my friends, and for the opportunity to push myself a little bit here. But I am mega excited for what's coming. Honestly, I just don't love the aesthetic of the rat-race here. It's the greasy saalaryman Wall Street slime-vibe of working 60 hours a week to save a couple hundred thousand dollars, that is in a way so yucky."
     ]
