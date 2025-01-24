@@ -65,8 +65,8 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
-    id: '004',
-    number: '004',
+    id: '003',
+    number: '003',
     date: '01/24/25',
     location: 'New York City',
     content: [
@@ -78,8 +78,8 @@ const notes: NoteData[] = [
     ]
   },
   {
-    id: '003',
-    number: '003',
+    id: '002',
+    number: '002',
     date: '01/23/25',
     location: 'New York City',
     content: [
