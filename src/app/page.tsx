@@ -89,20 +89,9 @@ const notes: NoteData[] = [
     ]
   },
   {
-    id: '002',
-    number: '002',
-    date: '01/22/25',
-    location: 'New York City',
-    content: [
-      "I didn't think I could top Suno or Apple Human Interface. When those fell through, although it made sense, a part of me felt like I was on a slippery path to nothing. But yet again, it seems I've come out on top with something better, but still, just a chance to shoot on goal. Yet with this bullet in the chamber, I'm bringing with me a big metal bat too, and even more dangerous, my signature positive attitude.",
-      "In recognizing the silliness of \"success,\" what people think it is versus what it is in reality, I've found peace. We're always chasing something: love, career, a feeling. But living well is not like that at all, it's about forgetting what you're chasing and allowing yourself to run for the fun of it. You like running, don't you? Trick question. I know you don't. But, you like the feeling after. And that's what I've been doing, trying to maximize that feeling after. If you can live in that state, I think it's success.",
-      "For me to put pressure on this touchpoint, it's been helpful to understand that I don't need to do anything at all. It's certain that I am happy in all realities that I don't let myself down, not by a certain outcome materialization, but by action and intention. So to answer your question, it's not that I'm not bothered by it. Being nonchalant is not about being emotionless. It's about diffusing negative affect over a long time horizon to focus on the mission. Conceding what you want doesn't imply you want it less."
-    ]
-  },
-  {
     id: '001',
     number: '001',
-    date: '01/21/25',
+    date: '01/22/25',
     location: 'New York City',
     content: [
       "Most nights, I'm in their basement—hands on the heavy bag, a shuffle of feet on the floor, Charlie calling out, \"Keep your hands up!\" You soon learn it's not about avoiding every punch: it's about seeing when to take them, how to absorb the impact.",
