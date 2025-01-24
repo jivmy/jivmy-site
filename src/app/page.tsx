@@ -23,7 +23,6 @@ function SeriffText({ children }: { children: React.ReactNode }) {
 function Note({ number, date, children }: { number: string, date: string, children: React.ReactNode }) {
   // Extract date parts (assuming date format is MM/DD/YY)
   const [month, day, year] = date.split('/');
-  console.log(`Note ${number} - Date: ${date}, Parts: month=${month}, day=${day}, year=${year}`);
 
   return (
     <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-12 border border-black/[0.03] mb-12">
@@ -35,7 +34,6 @@ function Note({ number, date, children }: { number: string, date: string, childr
               
       <div className="relative flex gap-16">
         <div className="hidden lg:block sticky top-8 h-fit space-y-20">
-          <span className="vertical-text text-sm tracking-[0.2em] text-black/40 uppercase -rotate-180">New York City</span>
           <div className="flex flex-col items-center gap-3">
             <span className="text-sm font-light text-black/30">{month}</span>
             <div className="w-px h-10 bg-black/10"></div>
@@ -49,7 +47,7 @@ function Note({ number, date, children }: { number: string, date: string, childr
           style={{ lineHeight: 1.5 }}
         >
           <div className="flex flex-col gap-1 mb-3">
-            <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">New York City - {date}</span>
+            <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">{date}</span>
           </div>
           {children}
         </article>
@@ -64,6 +62,16 @@ function Note({ number, date, children }: { number: string, date: string, childr
 }
 
 const notes: NoteData[] = [
+  {
+    id: '004',
+    number: '004',
+    date: '01/24/25',
+    content: [
+      "Sitting in the dark, listening to the building's usual noises, but is is no usual noise. There's a crow in the boiler room. It's about the size of a raccoon. Not sure what it's doing there, or how it got there, and I don't exactly know how to get it out. So, we're leaving. Just like that—packing up and heading down the street.",
+      "March isn't far off anymore—and as time passes here I'm learning that... I don't like New York. Or at least I'm not in love with it like I was with California. Sure, the people have been fun, but I just don't like living here, day-to-day. Oops, glad to know. I mean it's not like even I could have predicted this outcome, but it seems like I'm seriously headed to Spain for the next few years. I don't even speak Spanish—I took French. And so just like that, my chapter in America comes to a close. For now, at least. Unless I hit that Goliath next week, but even then it's back around to Mountain View.",
+      "I just want to say that I'm so happy to have spent such quality time here and to have met such unique and soulful people. I'm grateful, and humbled by my friends, and for the opportunity to push myself a little bit here. But I am so, so excited for what's coming. Honestly, I just don't love the aesthetic of the rat-race here. It's a greasy Wall Street slime-vibe of working 60 hours a week for a couple hundred thousand dollars, that is in a way so yucky."
+    ]
+  },
   {
     id: '003',
     number: '003',
