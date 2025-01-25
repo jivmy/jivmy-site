@@ -65,6 +65,31 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
+    id: '005',
+    number: '005',
+    date: '01/25/25',
+    location: 'New York City',
+    content: [
+      "Let's run circuit for a second. All of you know me very well. We've grown up next door to each other. Our parents are friends. We went to college together, interned together, explored the world together. And so all of you know that I got laid off in the fall after Spatial invented a VR Monkey Horror game in July, becoming the biggest thing in the world and blowing up our design team while becoming a game company. Some of you think that I'm stressed, Jonathan, Derek—and so you don't know me as well as you think you do. Yes, I care that I was in the same room as the guy who invented Snapchat memories and I said \"My cat ate my mom\" in a 9th round interview, yes it makes me cringe. But I don't care that I lost the opportunity. And that's something that I have a hard time explaining to people. I don't care about outcomes, period. I only care about intention and behavior. I do things to become something, not to achieve something. So here my intention was to be the kind of person who would fail, and not let it disturb him, not the kind of person who doesn't face adversity.",
+      "If I didn't love and crave the struggle, I wouldn't be in New York unemployed after dark, not at \"Rumble Boxing,\" no, but at Woodside Boxing Academy, a professional fighting camp. Some guy there just told me that he once visited the country of Maryland, and you could tell me what that means, please.",
+      "During training tonight, I had a second thought branch out of my head. Yes, I could book it to Barcelona, and that's Path A, maybe still default. Now let's run sims on Path B, which is what should have happened already: I go back to a cushy life in Vancouver where I have everything in the world handed to me... but yet, right after Christian hit me with his jab, Path C materialized as an eligible bachelor in front of me. I'm in the best shape of my life, becoming a titan. I'm solid. You know how there is all this AI talk about how computers are going to wipe out every job in the world? If that is even a 50% probable outcome, and which it seems at this point that it's higher, why would I not chase physical perfection? Screw all that tech shit. In this time of peace, I could just... chill a little bit. It's like that book \"Thinking Fast and Slow.\" It seems natural that I should be moving faster into the next chapter, and yet although counterintuitive, it might be true that I should slow down and chase something else for a little bit—something out of a painting.",
+      "Really, what I have to lose can't be lost, even if I stay here for a year, just fighting and leading design for Kalipso remote."
+    ]
+  },
+  {
+    id: '004',
+    number: '004',
+    date: '01/24/25',
+    location: 'New York City',
+    content: [
+      "Some part of me feels like life is short. Look at how fast time flies. It's nearing February, and I remember when this time felt so far away. Now, it's here. We're all kind of just drifting through it, clinging on to any possibility of permanence or stability for dear life. It's easy to say \"oh now is not the right time for this,\" or \"if I do this now, in the future I'll be able to have this.\" None of us knows that, and we ignore our hearts out some indecisiveness, or fear that if we were to ask for what we want, we'd face both our own and life's many limitations.",
+      "At the same time, there's a degree of truth rooted in our doubts about our dreams. I don't believe in ghosts, but it's never really the right timing, it's true, and we can never have everything we want. In these days, it seems like we give our years to a craft and see it wiped away by a machine in a matter of months. Some parts of me yearn to step away from it all—the call of adventure—lift a house, and just chill out for the rest of my time here. I'm not ready for that yet.",
+      "It seems that I'm addicted to the plot, attached to following this rollercoaster path through the world, not ever staying long enough to get disappointed. We really grew up on the final level of the map, didn't we? Spain is a decision that I'll have to sacrifice even more for. I am very much scared... and I will do it. I'll open up the possibilities of life, even though doing so ends some other dreams.",
+      "Saying goodbye to this decade long chapter, I'm sitting with a cocktail of anticipation, fear, longing, nostalgia, and determination. It feels very human, in an adult world where we're all just trying to figure it out, balance what we think is right with what we dream about when the lights go out and before the birds chirp.",
+      "I have let some people down, and I have raised more up. I have said no to some things, and yes to more. I have seen both sides of luck, and I have told jokes that have made others laugh until their bellies hurt. I have seen more than most, and have loved more than many. In through it all, I have become a better person: more certain that if the world were to crumble, I would remain stable. It's obvious what it could have been, and I'm sorry."
+    ]
+  },
+  {
     id: '003',
     number: '003',
     date: '01/24/25',
