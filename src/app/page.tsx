@@ -43,7 +43,7 @@ function Note({ number, date, location, children }: { number: string, date: stri
             <div className="w-px h-10 bg-black/10"></div>
             <span className="text-sm font-light text-black/30">{year}</span>
           </div>
-        </div>Jonathan
+        </div>
         <article 
           className="prose prose-xl flex-1 flex flex-col gap-0 p-0"
           style={{ lineHeight: 1.5 }}
