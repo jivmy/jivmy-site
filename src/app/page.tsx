@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 // Import Noto Serif SC font
 const NotoSerifSC = () => (
@@ -14,7 +14,7 @@ interface NoteData {
   number: string;
   date: string;
   location: string;
-  content: (string | (string | JSX.Element)[])[];
+  content: (string | (string | JSX.Element)[] | { type: 'audio', src: string })[];
 }
 
 function SeriffText({ children }: { children: React.ReactNode }) {
@@ -63,7 +63,63 @@ function Note({ number, date, location, children }: { number: string, date: stri
   );
 }
 
+function AudioPlayer({ src }: { src: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.addEventListener('ended', () => setIsPlaying(false));
+      return () => {
+        audio.removeEventListener('ended', () => setIsPlaying(false));
+      };
+    }
+  }, []);
+
+  return (
+    <div className="w-full h-[60vh] flex items-center justify-center">
+      <div className="w-64 h-64 relative cursor-pointer" onClick={togglePlay}>
+        <div className="absolute inset-0 bg-black/[0.02] rounded-full"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          {isPlaying ? (
+            <svg className="w-16 h-16 text-black/40" fill="currentColor" viewBox="0 0 24 24">
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+          ) : (
+            <svg className="w-16 h-16 text-black/40" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          )}
+        </div>
+        <audio ref={audioRef} src={src} />
+      </div>
+    </div>
+  );
+}
+
 const notes: NoteData[] = [
+  {
+    id: '005',
+    number: '005',
+    date: '01/25/25',
+    location: 'New York City',
+    content: [
+      { type: 'audio', src: '/real.m4a' }
+    ]
+  },
   {
     id: '004',
     number: '004',
@@ -126,11 +182,23 @@ export default function Home() {
       
       {sortedNotes.map((note) => (
         <Note key={note.id} number={note.number} date={note.date} location={note.location}>
-          {note.content.map((paragraph, index) => (
-            <p key={index} className={`${index === 0 ? '!mt-0 first-letter' : ''} ${index === note.content.length - 1 ? '!mb-0' : ''}`}>
-              {Array.isArray(paragraph) ? paragraph : paragraph}
-            </p>
-          ))}
+          {note.content.map((paragraph, index) => {
+            if (typeof paragraph === 'string') {
+              return (
+                <p key={index} className={`${index === 0 ? '!mt-0 first-letter' : ''} ${index === note.content.length - 1 ? '!mb-0' : ''}`}>
+                  {paragraph}
+                </p>
+              );
+            } else if (Array.isArray(paragraph)) {
+              return (
+                <p key={index} className={`${index === 0 ? '!mt-0 first-letter' : ''} ${index === note.content.length - 1 ? '!mb-0' : ''}`}>
+                  {paragraph}
+                </p>
+              );
+            } else if (paragraph.type === 'audio') {
+              return <AudioPlayer key={index} src={paragraph.src} />;
+            }
+          })}
         </Note>
       ))}
     </main>
