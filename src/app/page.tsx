@@ -65,6 +65,7 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 function AudioPlayer({ src }: { src: string }) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
@@ -75,24 +76,35 @@ function AudioPlayer({ src }: { src: string }) {
         audioRef.current.play();
       }
       setIsPlaying(!isPlaying);
+      setIsExpanded(!isExpanded);
     }
   };
 
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.addEventListener('ended', () => setIsPlaying(false));
+      audio.addEventListener('ended', () => {
+        setIsPlaying(false);
+        setIsExpanded(false);
+      });
       return () => {
-        audio.removeEventListener('ended', () => setIsPlaying(false));
+        audio.removeEventListener('ended', () => {
+          setIsPlaying(false);
+          setIsExpanded(false);
+        });
       };
     }
   }, []);
 
   return (
-    <div className="w-full h-[60vh] flex items-center justify-center">
-      <div className="w-64 h-64 relative cursor-pointer" onClick={togglePlay}>
-        <div className="absolute inset-0 bg-black/[0.02] rounded-full"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
+    <div className="relative w-full h-[60vh] flex items-center justify-center">
+      <div 
+        className={`absolute w-64 h-64 rounded-full bg-black/[0.02] transition-all duration-500 ease-out ${
+          isExpanded ? 'scale-[2]' : 'scale-100'
+        }`}
+      />
+      <div className="relative cursor-pointer z-10" onClick={togglePlay}>
+        <div className="flex items-center justify-center">
           {isPlaying ? (
             <svg className="w-16 h-16 text-black/40" fill="currentColor" viewBox="0 0 24 24">
               <rect x="6" y="4" width="4" height="16" />
@@ -104,8 +116,8 @@ function AudioPlayer({ src }: { src: string }) {
             </svg>
           )}
         </div>
-        <audio ref={audioRef} src={src} />
       </div>
+      <audio ref={audioRef} src={src} />
     </div>
   );
 }
