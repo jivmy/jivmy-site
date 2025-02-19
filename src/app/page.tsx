@@ -28,6 +28,10 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
   return (
     <article className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-12 border border-black/[0.03] mb-12">
+      <div className="absolute -top-12 -right-6 text-[12rem] font-bold text-black/[0.02] select-none">
+        {number.padStart(3, '0')}
+      </div>
+
       <header>
         <time dateTime={isoDate} className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">
           {location} - {date}
@@ -122,7 +126,7 @@ function AudioPlayer({ src }: { src: string }) {
 const notes: NoteData[] = [
   {
     id: '004',
-    number: '006',
+    number: '004',
     date: '02/18/25',
     location: 'New York City',
     content: [
@@ -133,12 +137,12 @@ const notes: NoteData[] = [
       "She ran a slow start, and there were times when after paying her employees, there was left no more than 500 RMB in her pocket for the New Year. She rode a motorcycle, and wore a black leather jacket. In times of stress, she would seat herself by the waterfall at her favorite restaurant and think through her plans under live music in the foreground. She never had anybody to rely on, never any man that was strong enough to not hurt her, and never any safety net that she didn't weave herself. When steam picked up, she bought my grandparents their first apartment. And then her cousins, and then the same for her aunts and uncles. Twelve homes for one family. Living twenty hour days, nibbling on ginseng to stay awake.",
       "When she had me in her forties, she sat as one of the most successful businesswomen in the province, serving as the founder and chairman of a real estate development company with hundreds of employees. She held dozens of buildings across the mainland, and I lived a childhood marked by private drivers, home chefs, an elevator in two houses, four saunas, six nannies, and an incessant sickness that landed me in the hospital for months out of each year. When I turned three, my left lung collapsed and my heart stopped. Asked, the doctors explained that my body could not handle the air pollution marred the Chino-industrial metropolis I was born in. When I turned four and at the at the height of her success, she shuttered the operation and moved our family to the bright and airy Canada. When I asked her why, she smiled, and fed me a scoop. Four years after moving to Vancouver, a eight figure investment that would have sustained our family through interest crumbled into dust. In the following decades, we sold asset after asset to sustain living expenses, and when I earned acceptance into UCLA, she gave me a choice. I could either attend college for free in Canada, or she would pay my out of state tuition with no condition. But even then, I knew the gravity what that choice meant.",
       "Sometimes I have a hard time explaining my decisions to people. Why would I go to school in Los Angeles for 100k a year when I could attend college for free on scholarship in Canada? Why would I live in the kind of place I lived in San Francisco, coming from my background? Why would I stay at a startup running out of money only out of loyalty to my mentor, risking deportation? And when the worst happened, why would I move to New York after being laid off, when I could return home and ride out the storm? Why more would I cut off thousands that I like, and that love me, just for focus? And why would I choose design over something stable, like finance, medicine, law, or engineering?",
-      "Days before being forced to leave the place I have called home for a decade—today, I signed a letter to lead a team of dozens across the most ambitious design project in human history. It carries the gravity to redefine the entire concept of visual communication. What does it mean to be a designer? It means to think through emotion to drive perception and guide action. It's the redline through desire and output. It's what gets you onto the Metro, off the J line, into the classroom. It's what keeps you scrolling and scrolling through your loneliest moments, wondering about things that shouldn't even be on your mind. It's what helps you pay your credit card, and invest in your future. It's what helps you find songs to listen to when you score a goal so unlikely it doesn't seem like it's real.",
-      "I've said no to so many things that I've wanted for this moment… people, places, and faces… it's hard not to get emotional. And it's hard not to be amazed that I've been blessed with one of the three slots in history to redesign design itself. I chose this craft because I loved it, but also because I saw the slim chance that this moment would happen, that I would catch a sliver in time to take a golden risk, and that I would be blessed with the courage to jump into the dark without a harness. From here, things will move fast, and I recognize that. Growing up, my mom would tell me, \"Save the core of a watermelon for those you love; it's the sweetest part.\" Design is my core. It's my channel for giving back to my family, and it's my way of making myself proud. I've long ago set to become the best in the world at what I do. Today, I arrive at the gate of my American dream. I will always sacrifice what I want and shoulder a world of pain to give its equivalent and opposite to those I love. It's just how I was raised. Though it means remaining apart from family, it has become time to share my sweetest part."
+      "Days before being forced to leave the land I have called home for a decade—today, I signed a letter to lead a team of dozens across the most ambitious design project in human history: to redefine the process of visual communication. What does it mean to be a designer? It means to think through emotion to drive perception and guide action. It's the redline through desire and output. It's what gets you onto the Metro, off the J line, into the classroom. It's what keeps you scrolling and scrolling through your loneliest moments, wondering about things that shouldn't even be on your mind. It's what helps you pay your credit card, and invest in your future. It's what helps you find songs to listen to when you score a goal so unlikely it doesn't seem like it's real.",
+      "I've said no to so many things that I've wanted for this moment… people, places, and faces… it's hard not to get emotional. Growing up, my mom would tell me, \"Save the core of a watermelon for those you love; it's the sweetest part.\" I've long ago set to become the best in the world at what I do. Today, I arrive at the gate of my American dream. I will always sacrifice what I want and shoulder a world of pain to give its equivalent and opposite to those I love. It's just how I was raised: my sweetest part"
     ]
   },
   {
-    id: '005',
+    id: '003',
     number: '003',
     date: '01/26/25',
     location: 'New York City',
