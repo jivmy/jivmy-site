@@ -124,7 +124,7 @@ function AudioPlayer({ src }: { src: string }) {
 
 const notes: NoteData[] = [
   {
-    id: '006',
+    id: '004',
     number: '006',
     date: '02/18/25',
     location: 'New York City',
@@ -143,34 +143,11 @@ const notes: NoteData[] = [
   },
   {
     id: '005',
-    number: '005',
+    number: '003',
     date: '01/26/25',
     location: 'New York City',
     content: [
       { type: 'audio', src: '/real.m4a' }
-    ]
-  },
-  {
-    id: '004',
-    number: '004',
-    date: '01/25/25',
-    location: 'New York City',
-    content: [
-      "I love that I'm writing again. Something about saying what's going on helps to disambiguate it. Before I get into what I have in store for us today, I'd like to preface this yap with some facts. Fact: I never know what I'm going to write or say more than a single word in advance. Fact: 50 Cent definitely hits harder in New York than in Metro Van. Fact: It's actually impossible that I fail. I know what success feels like. I'm surrounded by it, and I was raised by it. One of my leading traits is my ability to adapt and evolve. Unlike many others, I don't really care what happens to me. It doesn't matter, because I know what I want: in my head, the picture is really clear. It has nothing to do with making anything happen with any particular person or situation. I see infinite possibilities where I'm thriving and happy. It has nothing to do with a scenario, and everything to do with self perception.",
-      "Like the best way for me to describe it is—and I have done this innumerable times in the past—I can see an image in my head of a new evolution. And once the mold sets, I can cut out every single distraction and move towards the target with an acute degree of precision. It's among my superpowers. And tonight, I saw it. It's an odd path, and I appreciate that about it. And honestly, no diss to anybody but when I see people seeking attention, trying to be cool, I cringe. And I feel like that's what separates the dance studio from the boxing gym. I always got the feeling that people at dance were peacocking, just a little bit. Like, \"Oh look at me, I'm so cool, I'm so sexy.\" And it's like, one of the main intentions for participating in the hobby. Fighters don't care about perception, only winning. I've learned that to win, you need to punch more, at higher velocities and with greater precision. You could produce a long diffuse force over time, say... consistent effort, in this metaphor, but it wouldn't be enough to produce the knockout. Similarly, you could pack as much power into a shot as you can, and whiff if your timing is off. Timing, power, and precision—some things in life are meant to be slapped, at the right time.",
-      "Honestly, now that I'm talking my shit, the older I get the less I fuck with people. And I mean this with no hard feelings, but I feel like most people are kind of the same person copy and pasted. And there's nothing wrong with that, honestly, it's fine.  But how many people go on TikTok for fun, like to watch KDramas, go shopping, go clubbing, grab boba? Not saying these hobbies suck, although they totally do, it's just hard to get an insightful perspective out of people who consume the same overlapping sets of inputs. Opinions arise from a synthesized set of diverse perspectives. Otherwise it's not an opinion, it's just something you fell into doing or believing because it was convenient. So when I say \"I don't fuck with people,\" I don't mean I dislike people. I just know such interesting folks that I get bored of hearing the same ideas from these broheads.",
-      "On a positive note, I love hating on people... it's so fun. Haha I'm kidding. But no, I'm not kidding at all. Whatever, back to the year of creativity. It's a blessing that I'm not tied to any place or person. I'm standing at this ledge right now where I can jump into any of four continents to base the following years. It's an amazing feeling that not many people get to have. Not only that, I don't have the pressure of having to make money. Alleviation brings me closer to the target, because it offers space to polish craft by setting strategic long-term initiatives—think in years, instead of weeks or months. Next up is to rotate emphasis through core vectors, starting with the physical."
-    ]
-  },
-  {
-    id: '003',
-    number: '003',
-    date: '01/24/25',
-    location: 'New York City',
-    content: [
-      "All of you know me very well. We've grown up next door to each other. Our parents are friends. We went to college together, interned together, explored the world together. And so all of you know that I got laid off in the winter after Spatial invented a VR Monkey Horror game in July, becoming the biggest thing in the world and blowing up our design team while becoming a game company. Some of you think that I'm stressed, and so you don't know me as well as you think you do. Yeah, I care that I was in the same room as the guy who invented Snapchat memories and said \"My cat ate my mom\" in a 9th round interview, yes it makes me cringe. But I don't care that I lost the opportunity. And that's something that I have a hard time telling people. Outcomes don't matter to me. I only care about intention and behavior. I do things to become someone, not to get something. I set to be the kind of person who can fail into no negative affect, not the kind of person who can't face adversity head-on.",
-      "I wouldn't be in New York if I didn't love and crave the struggle, jobless after dark, not at your \"Rumble Boxing,\" no, but at Woodside Boxing Academy, a professional fighting camp. Some guy there just told me that he once visited the country of Maryland, and you can tell me what that means, please. Give me the hardest story possible. Take away all my luck. Strip me of my status. Lay me bare for the man that I am, and bear witness to what happens next.",
-      "During training tonight, I had a second thought branch out of my head. Yes, I could book it to Spain, and that's Path A, maybe still default. Now let's run sims on Path B, which is what should have happened already: I go back to a cushy life in Vancouver where I have everything in the world handed to me... but right after Christian hit me with his jab, Path C materialized as an eligible bachelor. I'm in the best shape of my life. You know how there is all this AI talk about how computers are going to wipe out every job in the world? If that is even a 50% probable outcome, and which it seems at this point that it's higher, why would I not entertain the idea of approaching physical perfection? Screw all that tech shit. In this time of peace, I could just... chill a little bit. It's like that book \"Thinking Fast and Slow.\" It seems natural that I should be moving faster into the next chapter, and yet although counterintuitive, it might be true that I should slow down and chase something else for a little bit—something out of a painting."
     ]
   },
   {
