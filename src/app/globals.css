@@ -34,7 +34,7 @@ body {
 
 .first-letter:first-letter {
   float: left;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 0.8;
   padding: 0.1em 0.15em;
   margin: 0.1em 0.2em 0 0;
