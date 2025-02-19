@@ -34,7 +34,7 @@ body {
 
 .first-letter:first-letter {
   float: left;
-  font-size: 3.5em;
+  font-size: 3em;
   line-height: 0.8;
   padding: 0.1em 0.15em;
   margin: 0.1em 0.2em 0 0;
@@ -52,7 +52,7 @@ body {
 
 @media (min-width: 640px) {
   .first-letter:first-letter {
-    font-size: 5em;
+    font-size: 4em;
   }
 }
 
