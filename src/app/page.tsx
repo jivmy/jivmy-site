@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Script from 'next/script'
 
 // Import Noto Serif SC font
 const NotoSerifSC = () => (
@@ -22,17 +23,16 @@ function SeriffText({ children }: { children: React.ReactNode }) {
 } 
 
 function Note({ number, date, location, children }: { number: string, date: string, location: string, children: React.ReactNode }) {
-  // Extract date parts (assuming date format is MM/DD/YY)
   const [month, day, year] = date.split('/');
+  const isoDate = `20${year}-${month}-${day}`; // Assuming years are in YY format
 
   return (
-    <div className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-12 border border-black/[0.03] mb-12">
-      <div 
-        className="absolute -top-12 -right-4 sm:-top-24 sm:-left-24 text-[12rem] sm:text-[20rem] font-black text-black/[0.025] select-none pointer-events-none"
-      >
-        {number}
-      </div>
-              
+    <article className="relative mx-2 sm:mx-auto w-[calc(100%-1rem)] sm:w-full max-w-[85ch] px-4 sm:px-12 py-8 sm:py-12 border border-black/[0.03] mb-12">
+      <header>
+        <time dateTime={isoDate} className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">
+          {location} - {date}
+        </time>
+      </header>
       <div className="relative flex gap-16">
         <div className="hidden lg:block sticky top-8 h-fit space-y-20">
           <span className="vertical-text text-sm tracking-[0.2em] text-black/40 uppercase -rotate-180">{location}</span>
@@ -48,9 +48,6 @@ function Note({ number, date, location, children }: { number: string, date: stri
           className="prose prose-xl flex-1 flex flex-col gap-0 p-0"
           style={{ lineHeight: 1.5 }}
         >
-          <div className="flex flex-col gap-1 mb-3">
-            <span className="text-sm tracking-[0.2em] text-black/40 uppercase lg:hidden">{location} - {date}</span>
-          </div>
           {children}
         </article>
       </div>
@@ -59,7 +56,7 @@ function Note({ number, date, location, children }: { number: string, date: stri
       <div className="corner corner-tr"></div>
       <div className="corner corner-bl"></div>
       <div className="corner corner-br"></div>
-    </div>
+    </article>
   );
 }
 
@@ -181,9 +178,31 @@ export default function Home() {
     return dateB.getTime() - dateA.getTime();
   });
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Jivmy",
+    "description": "Personal journal and thoughts on design, life, and the intersection of both.",
+    "blogPost": notes.map(note => ({
+      "@type": "BlogPosting",
+      "headline": `Note ${note.number}`,
+      "datePublished": new Date(note.date).toISOString(),
+      "author": {
+        "@type": "Person",
+        "name": "Your Name"
+      },
+      "location": note.location
+    }))
+  }
+
   return (
     <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <NotoSerifSC />
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="fixed inset-0 grain opacity-[0.15]"></div>
       
       {sortedNotes.map((note) => (

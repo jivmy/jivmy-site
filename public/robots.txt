@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jivmy.com/sitemap.xml 
