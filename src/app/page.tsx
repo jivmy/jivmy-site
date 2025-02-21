@@ -125,6 +125,16 @@ function AudioPlayer({ src }: { src: string }) {
 
 const notes: NoteData[] = [
   {
+    id: '006',
+    number: '006',
+    date: '02/21/25',
+    location: 'New York City',
+    content: [
+      "In the past months, I've grown apart from people that have been with me for decades, and part of me feels envy surrounding each step I take. I'm unaccustomed to it. Is this what it means to be suffering from success? I've given nothing but my best to those I cherish—large sums of money, time, and energy. I don't expect the same back, but this is... isolating. I can only confide in those that have more than me, those that have done more and have become more, of which there are many around me. But it's crazy how relationships that I thought would last a lifetime have disintegrated in the face of this transition. I have nothing but love for my friends.",
+      "If I land next Tuesday it's going to be hard to turn it down. I would be stupid to turn down near half a million and a lifetime of stability, even for Figma. I'm drawn to what New York could become and grow into, and now more recently afraid of what more bridges will burn with any more success. Yet I can't complain. Many would die for my position now, and I'm grateful."
+    ]
+  },
+  {
     id: '005',
     number: '005',
     date: '02/20/25',
