@@ -131,7 +131,7 @@ const notes: NoteData[] = [
     location: 'New York City',
     content: [
       "Across patterned sheets, slender bodies pass through through as usual, slurring with gin and false promises. Edges, some tattoos, and the names blur. I'm slipping into old habits, and respect is yet again not a prerequisite. What discipline I had in San Francisco could be seen as progress, but in another way it was a form of restraint. It's not like I don't believe in love... and it's not like I'm averse to sobriety. But this place has a way of pulling you. Maybe this works, although it's not ideal. More powders, pills, fun without any real discourse. Broken people that are enough for the moment: that's the beauty of the fringes.",
-      "I was just talking to Alex about this. We both know what's good for us, and yet at times we reject it because it feels too easy. Not for something better, but what's damaged is alluring, and there's more of that in the world than not. It's fascinating how so many clashing images of me exist in just as many people."
+      "I was just talking to Alex about this. We both know what's good for us, and yet at times we reject it because it feels too easy. Not for something better, but what's damaged is alluring, and there's more of that in the world than not. So many clashing images of me exist in just as many people; what's real and loyal remains elusive."
     ]
   },
   {
