@@ -130,8 +130,8 @@ const notes: NoteData[] = [
     date: '02/20/25',
     location: 'New York City',
     content: [
-      "Across patterned sheets, more bodies pass through through like usual, slurring with gin and false empty promises. Edges, some tattoos, now the names blur. I'm slipping back into old habits, and respect is no longer a prerequisite. What discipline I had in San Francisco could be seen as progress, but in another way it was a form of restraint. It's not like I don't believe in love... and it's not like I'm averse to sobriety. But this city has a way of pulling you in. I don't feel stable, even now. So maybe this works, though it's not ideal. More powders, pills, fun without any real discourse. Broken people that are just enough for the moment, and that's part of the beauty.",
-      "I was just talking to Alex about this. We both know what's good for us, and yet at times we reject it. Not for something better or to fill a void, but because there's something alluring about antipathy. It's always been easy for us, I just don't prefer to indulge."
+      "Across patterned sheets, more bodies pass through through like usual, slurring with gin and false empty promises. Edges, some tattoos, now the names blur. I feel myself slipping back into old habits, and respect is yet again not a prerequisite. What discipline I had in San Francisco could be seen as progress, but in another way it was a form of restraint. It's not like I don't believe in love... and it's not like I'm averse to sobriety. But this city has a way of pulling you in. I don't feel stable, even now. Maybe this works, though it's not ideal. More powders, pills, fun without any real discourse. Broken people that are just enough for the moment, and that's part of the beauty.",
+      "I was just talking to Alex about this. We both know what's good for us, and yet at times we reject it because it feels too easy. Not for something better or to fill a void. I just find something too alluring about antipathy. Always easy for us, I just don't prefer to indulge."
     ]
   },
   {
