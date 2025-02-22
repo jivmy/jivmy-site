@@ -68,7 +68,7 @@ const notes: NoteData[] = [
   {
     id: '009',
     number: '009',
-    date: '02/26/25',
+    date: '02/22/25',
     location: 'New York City',
     content: [
       "In the Hugo Hotel, I'm sat at a café with backlit ivy vines that traverse an open atrium. Oil paintings cling onto floral wallpaper, separated by laminated oak slabs forming a gradient that shimmers against orb-like lamps strung from the ceiling. If anything, one positive from this layoff is that I've been writing again, collecting and synthesizing my thoughts.",
@@ -82,7 +82,7 @@ const notes: NoteData[] = [
   {
     id: '008',
     number: '008',
-    date: '02/25/25',
+    date: '02/21/25',
     location: 'New York City',
     content: [
       "Last winter, I had a muse, and last summer, I had another. Maybe that's just how it goes—phases of intensity, followed by detachment. Nothing ever starts with the intention of being temporary, but you can feel it in the undertones. The way time moves too fast when you're with someone, how words come easier, how your mind sharpens in their presence. You start writing more, thinking more, feeling more. It's intoxicating. But the thing about muses is that they aren't meant to stay, but rather meant to show a lesson, to shine a better way forward.",
@@ -95,7 +95,7 @@ const notes: NoteData[] = [
   {
     id: '007',
     number: '007',
-    date: '02/24/25',
+    date: '02/20/25',
     location: 'New York City',
     content: [
       "When I joined Spatial, I thought I'd never land a role as surreal again. How many people get to start their careers as metaverse designers straight out of college? Our meetings weren't in boardrooms—they were in virtual spaces. Engineers rolled around as dolphins in hamster balls. Our CEO gave speeches in a gorilla suit. And after a few years, everything I saw on the screen was shaped by my own eye. Still I believe the metaverse has potential, offering connection in ways FaceTime never could. In its embarace, I carved out my career mission: to encourage people to have fun dreaming of better lives for themselves.",
@@ -113,7 +113,7 @@ const notes: NoteData[] = [
   {
     id: '006',
     number: '006',
-    date: '02/23/25',
+    date: '02/19/25',
     location: 'New York City',
     content: [
       "Like a frog along lily pads, the path to realizing an outcome follows an arc from point to point, easing in and out of each step. You should then try not to upset the natural flow of things. Frogs are not meant to struggle to swim. So your efforts should feel natural. And so if you fall in the water and the current carries you backwards, I would try not to resist it. Just let the waves carry you back to shore until you can jump again.",
@@ -123,7 +123,7 @@ const notes: NoteData[] = [
   {
     id: '005',
     number: '005',
-    date: '02/21/25',
+    date: '02/18/25',
     location: 'New York City',
     content: [
       "In the past months, I've grown apart from people that have been with me for decades, and part of me feels their envy cutting into each step I take. I'm not used to it. Is this what it means to be suffering from success? I've given nothing but my best to those I cherish—large sums of money, time, and energy. I don't expect the same back, but this is... isolating. I can only confide in those that have more than me, those that have done more and have become more, of which there are many around me. Still it's crazy how relationships I thought would last a lifetime have disintegrated in the face of this transition. I have nothing but love for my friends, and would do anything for them, even yet still.",
@@ -133,7 +133,7 @@ const notes: NoteData[] = [
   {
     id: '004',
     number: '004',
-    date: '02/20/25',
+    date: '02/17/25',
     location: 'New York City',
     content: [
       "Across patterned sheets, slender bodies pass through as usual, slurring with gin and false promises. Edges, some tattoos, and names that blur. I'm slipping into old habits, and respect is yet again not a prerequisite. What discipline I had in San Francisco could be seen as progress, but in another way it was a form of restraint. It's not like I don't believe in love... and it's not like I'm averse to sobriety. But this place has a way of pulling you. Maybe this works, although it's not ideal. Clean lines of powder, pills, touch without any real discourse. Broken people that are enough for the moment: that's the beauty of the fringes.",
@@ -143,7 +143,7 @@ const notes: NoteData[] = [
   {
     id: '003',
     number: '003',
-    date: '02/18/25',
+    date: '02/16/25',
     location: 'New York City',
     content: [
       "Growing up, my mom would tell me, \"Save the core of a watermelon for those you love; it's the sweetest part.\" Then, she would feed me a scoop.",
