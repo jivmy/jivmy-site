@@ -15,7 +15,7 @@ interface NoteData {
   number: string;
   date: string;
   location: string;
-  content: (string | (string | JSX.Element)[] | { type: 'audio', src: string })[];
+  content: (string | (string | JSX.Element)[])[];
 }
 
 function SeriffText({ children }: { children: React.ReactNode }) {
@@ -64,65 +64,6 @@ function Note({ number, date, location, children }: { number: string, date: stri
   );
 }
 
-function AudioPlayer({ src }: { src: string }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-      setIsExpanded(!isExpanded);
-    }
-  };
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (audio) {
-      audio.addEventListener('ended', () => {
-        setIsPlaying(false);
-        setIsExpanded(false);
-      });
-      return () => {
-        audio.removeEventListener('ended', () => {
-          setIsPlaying(false);
-          setIsExpanded(false);
-        });
-      };
-    }
-  }, []);
-
-  return (
-    <div className="relative w-full h-[60vh] flex items-center justify-center">
-      <div 
-        className={`absolute w-64 h-64 rounded-full bg-black/[0.02] transition-all duration-500 ease-out ${
-          isExpanded ? 'scale-[2]' : 'scale-100'
-        }`}
-      />
-      <div className="relative cursor-pointer z-10" onClick={togglePlay}>
-        <div className="flex items-center justify-center">
-          {isPlaying ? (
-            <svg className="w-16 h-16 text-black/40" fill="currentColor" viewBox="0 0 24 24">
-              <rect x="6" y="4" width="4" height="16" />
-              <rect x="14" y="4" width="4" height="16" />
-            </svg>
-          ) : (
-            <svg className="w-16 h-16 text-black/40" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </div>
-      </div>
-      <audio ref={audioRef} src={src} />
-    </div>
-  );
-}
-
 const notes: NoteData[] = [
   {
     id: '008',
@@ -130,12 +71,12 @@ const notes: NoteData[] = [
     date: '02/24/25',
     location: 'New York City',
     content: [
-      "When I joined Spatial, I thought I'd never land a role as surreal again. How many people get to start their careers as metaverse designers straight out of college? Our meetings weren't in boardrooms—they were in virtual spaces. Engineers rolled around as dolphins in hamster balls. Our CEO gave speeches in a gorilla suit. And after a few years, everything I saw on the screen was shaped by my own eye. Still I believe the metaverse has potential, offering connection in ways FaceTime never could. In its embarace, I carved out my career mission: to encourage people to have fun dreaming of better lives for themselves and the world.",
-      "I'd call myself a realist but an optimist. Life is fantasy, but only the kind rooted in real possibility. Dreams need action, and action fuels momentum that feeds into the dream. Imagination is the key to manifesting anything. Everything that exists—the Metro, fried chicken (I'm starving right now)—arose from imagination. Yet the problem is that reality tends to slow that momentum. You think of something cool to make but don't have the skills to build it. So you find a tutorial, follow it for a while, and then give up because the gap between your ambition and execution feels too wide to cross. I've been there over and over.",
-      "Ira Glass once talked about this gap—the one between taste and skill—that every creative person faces. You get into a craft because you have great taste, but at the start, your work isn't good enough to match that standard. It takes years of producing mediocre work just to get to the level you envisioned. A lot of people quit during that phase. The only way through is volume—putting in the reps until one day your skill finally catches up.",
+      "When I joined Spatial, I thought I'd never land a role as surreal again. How many people get to start their careers as metaverse designers straight out of college? Our meetings weren't in boardrooms—they were in virtual spaces. Engineers rolled around as dolphins in hamster balls. Our CEO gave speeches in a gorilla suit. And after a few years, everything I saw on the screen was shaped by my own eye. Still I believe the metaverse has potential, offering connection in ways FaceTime never could. In its embarace, I carved out my career mission: to encourage people to have fun dreaming of better lives for themselves.",
+      "I'd call myself a realist but an optimist. Life is fantasy, but only the kind rooted in real possibility. Dreams need action, and action fuels momentum that feeds into the dream. Imagination is the key to manifesting anything. Everything that exists—the Metro, fried chicken (I'm starving right now)—arose from imagination. Yet the problem is that reality tends to slow that momentum. You think of something cool to make but don't have the skills to build it. So you find a tutorial, follow it for a while, and then give up because the gap between your ambition and execution feels too wide to cross. I've been there over and over, and even still feel like a beginner.",
+      "Ira Glass once talked about this gap—the one between taste and skill—that every creative person faces. You get into a craft because you have great taste, but at the start, your work isn't good enough to match that standard. It takes years of producing mediocre work just to get to the level you envisioned. A lot of people quit during that phase. One path remains forward—putting in the reps until one day your skill finally catches up. It's the only way to become great.",
       "It took me years to fully understand the difference between art and design. Art is about expression. It doesn't need an audience, and its purpose is to evoke emotion—or nothing at all. Design, on the other hand, is about intention. It serves a function and has real-world implications. Designers at Tesla consider every possible situation you might encounter on the road, mapping those moments to visual cues that guide you safely to your destination. Mess up the visual hierarchy, an auditory cue, or forget an edge case, and that could mean a car crash—or worse.",
       "Not every design decision is life-or-death. Sometimes you're just tweaking Walmart's checkout flow. But the core principle remains the same: design exists to facilitate action through intentional aesthetics. And in a company, that action is deeply tied to business goals. Instagram designers work to keep you scrolling so they can serve you more ads. Netflix designers craft a premium experience so you'll keep paying for it.",
-      "For a while, jamming a metaverse was cool. But at some point, it felt hollow. I fell out of touch with the craft. I chose design for a reason, and when that reason started slipping away, I knew I had to move, and reached a point where I would've rather been designing for Home Depot because at least there, I'd know my work would be useful to someone. Now, it feels surreal. There's something about working on the tools themselves, something about shaping what others will use to create, to dream. How it all connects feels too natural to ignore.",
+      "For a while, jamming a metaverse was cool. But at some point, it felt hollow. I fell out of touch with the craft. I chose design for a reason, and when that reason started slipping away, I knew I had to move, and reached a point where I would've rather been designing for Home Depot because at least there, I'd know my work would be useful to someone. Now, it feels surreal. There's something about working on the tools themselves, something about shaping what others will use to create, to dream of a better world.",
       "Design has always evolved. Print, static visual communication, graphic and digital design, interactive UX. Now, we're ushering in an era of adaptive design—personalized, dynamic, and fluid. How things look and feel will no longer be fixed. The same app—Spotify, for example—could be a completely different experience depending on the person using it. I'm excited to help define that future.",
       ["And yet, despite everything, the Mountain View role at Microsoft lingers in my mind. Where Figma is about creation, Copilot is about something else entirely. Connection. Not just any connection, but the first real bridge between human and AIL: the first time technology speaks not just to us, but with us. I've been talking to computers my whole life through my annual time capsules, so in a weird way, this feels like fate. Charlie sold  it to me like this: ChatGPT is for utility, Perplexity is for search, and Copilot is for emotion. Not an assistant, not a tool—something more (", <a href="https://www.youtube.com/watch?v=KKNCiRWd_j0" target="_blank" rel="noopener noreferrer">here's a cool TED talk on the team</a>, "). With only six designers on Microsoft AI right now, I'm drawn to the scale in front of me. The weight of it, the reach. The chance to be there at the start, shaping something that billions of people will one day rely on."],
       "New York still has its draw. So does Mountain View. It's funny how much of life is shaped by where you decide to stay. At this crossroads, I can't make a wrong decision anymore. It's not about what I want to do—it's about where I want to be, who I want to become. I feel like the luckiest person on the planet.",
@@ -187,15 +128,6 @@ const notes: NoteData[] = [
       "Sometimes I have a hard time explaining my decisions to people. Why would I go to school in Los Angeles for 100k a year when I could attend college for free on scholarship in Canada? Why would I live in the kind of place I lived in San Francisco, coming from my background? Why would I stay at a startup running out of money only out of loyalty to my mentor, risking deportation? And when the worst happened, why would I move to New York after being laid off, when I could return home and ride out the storm? Why more would I cut off thousands that I like, and that love me, just for focus? And why would I choose design over something stable, like finance, medicine, law, or engineering?",
       "Today, four days before being forced to leave the land I have called home for a decade, I signed a letter to lead a team of dozens across history's most contentious design project. What should it mean for a computer to create subjective experiences? I've said no to so many things that I've wanted for this moment… people, places, and faces… it's hard not to get emotional, and  easy to feel the weight of this responsiblity. Many now depend on the choices I make.",
       "Growing up, my mom would tell me, \"Of all the buildings under my wing, it seems that you may grow into the tallest one.\" Once, I set out to become the best in the world at what I do, giving my heart to create a future where technology is no longer plagued by mindless consumption. Here I arrive at the gate of my American dream. I will always sacrifice what I want and shoulder any weight to provide its equivalent and opposite to those I love, to my family and our world. It's just how I was raised: my sweetest part."
-    ]
-  },
-  {
-    id: '003',
-    number: '003',
-    date: '01/26/25',
-    location: 'New York City',
-    content: [
-      { type: 'audio', src: '/real.m4a' }
     ]
   },
   {
@@ -272,8 +204,6 @@ export default function Home() {
                   {paragraph}
                 </p>
               );
-            } else if (paragraph.type === 'audio') {
-              return <AudioPlayer key={index} src={paragraph.src} />;
             }
           })}
         </Note>
