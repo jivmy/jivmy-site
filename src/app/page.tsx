@@ -125,6 +125,17 @@ function AudioPlayer({ src }: { src: string }) {
 
 const notes: NoteData[] = [
   {
+    id: '008',
+    number: '008',
+    date: '02/23/25',
+    location: 'New York City',
+    content: [
+      "Like a frog along lily pads, the path to realizing an outcome follows an arc from point to point, easing in and out of each step. You should then try not to upset the natural flow of things. Frogs are not meant to struggle to swim. So your efforts should feel natural. And so if you fall in the water and the current carries you backwards, I would try not to resist it. Just let the waves carry you back to shore until you can jump again.",
+      "You have a shore; you should jump. Either you reach your target, or the current carries you forward onto the next lily pad, or you missed! Backwards, onto land you go. But you should remember that you are a frog, and that frogs don't drown. You can always try again, and the more you jump, I guess the better you get at jumping. Frogs weren't born jumping, but they are born for it... it's what frogs do. And so you should not be afraid of the water.",
+      "In other news I think I'm being stalked by my Spencer's ex girlfriend so she can keep tabs on him and it's kind of creeping me out. Changing my Instagram handle isn't even working. So I'm gonna shake it off a little heavier."
+    ]
+  },
+  {
     id: '007',
     number: '007',
     date: '02/22/25',
