@@ -68,6 +68,19 @@ const notes: NoteData[] = [
   {
     id: '008',
     number: '008',
+    date: '02/25/25',
+    location: 'New York City',
+    content: [
+      "Last winter, I had a muse, and last summer, I had another. Maybe that's just how it goes—phases of intensity, followed by detachment. Nothing ever really starts with the intention of being temporary, but you can feel it in the undertones. The way time moves too fast when you're with someone, how words come easier, how your mind sharpens in their presence. You start writing more, thinking more, feeling more. It's intoxicating. But the thing about muses is that they aren't meant to stay, they're meant to show a lesson, a better way forward.",
+      "Each time, attachment forms too quickly. I saw it happening in real time, like watching myself make a mistake I couldn't stop. That's when I realized I was slipping into old habits, mistaking inspiration for permanence. That's not what I want right now—not in this season of my life, not while everything is still in chaos and motion. So I prefer things casual. Moving in and out of people's lives, and letting them do the same with mine. No expectations, no illusions of forever. Just presence, growth, and understanding.",
+      "Love is what you build for yourself and share with others. I used to think it was attachment—used to mistake longing for meaning, but that was a reflection of what I hadn't yet learned to give myself. Self-love isn't indulgence. It's discipline. It's choosing what's right over what's easy. Waking up early, even when you don't want to. Going to the gym despite exhaustion. Protecting your energy, and being selective about who gets access to your space.",
+      "And through all of this, I've figured out the image of what I want. Someone calm, composed, unbothered in the face of chaos, and with perspectives that shape my own. Stylish, sharp, self-assured without a need for validation, because they already know who they are, who they want to be, and how to get there. I'm thankful, and wouldn't have known that without having been with many of the opposite. Experience refines you. Teaches you where your boundaries should be. Makes it easier to walk away when it doesn't align, no matter how good it feels in the moment, or how sweet the other person is. I'm sure that I've played the same role in the lives of many, and I wish them all the best.",
+      "For now, I need to disappear. I have a hunch that Spencer's ex is stalking my socials, and I have no interest in losing my privacy. But even that, I get how it feels to move forward after your first love."
+    ]
+  },
+  {
+    id: '007',
+    number: '007',
     date: '02/24/25',
     location: 'New York City',
     content: [
@@ -84,8 +97,8 @@ const notes: NoteData[] = [
     ]
   },
   {
-    id: '007',
-    number: '007',
+    id: '006',
+    number: '006',
     date: '02/23/25',
     location: 'New York City',
     content: [
@@ -94,8 +107,8 @@ const notes: NoteData[] = [
     ],
   },
   {
-    id: '006',
-    number: '006',
+    id: '005',
+    number: '005',
     date: '02/21/25',
     location: 'New York City',
     content: [
@@ -104,8 +117,8 @@ const notes: NoteData[] = [
     ]
   },
   {
-    id: '005',
-    number: '005',
+    id: '004',
+    number: '004',
     date: '02/20/25',
     location: 'New York City',
     content: [
@@ -114,8 +127,8 @@ const notes: NoteData[] = [
     ]
   },
   {
-    id: '004',
-    number: '004',
+    id: '003',
+    number: '003',
     date: '02/18/25',
     location: 'New York City',
     content: [
@@ -154,6 +167,9 @@ const notes: NoteData[] = [
   }
 ];
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default function Home() {
   // Sort notes by date in ascending order
   const sortedNotes = [...notes].sort((a, b) => {
@@ -180,7 +196,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
+    <main key={notes.length} className="min-h-screen bg-white relative my-2 sm:my-12 overflow-hidden">
       <NotoSerifSC />
       <Script
         id="structured-data"
