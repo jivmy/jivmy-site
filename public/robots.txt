@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /self-custody
+Disallow: /dapp-workflow
 Sitemap: https://jivmy.com/sitemap.xml 
