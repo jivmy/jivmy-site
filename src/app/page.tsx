@@ -66,6 +66,23 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
+    id: '010',
+    number: '010',
+    date: '02/23/25',
+    location: 'New York City',
+    content: [
+      "I'm starting to pick up steam; In that time at the café, I've found clarity, and it's been gratifying. Really I just needed to go touch grass—being stuck in the crib hasn't been good for the vibes. Because Charlie and I click on the future of Microsoft AI being deeply human and interfaced through voice reflection, I've been feeding these entries into Copilot to see what my negative blinds spots are so I can grow. I'll address them here:",
+      "Pushing people away – You frame it as a necessity for success and stability rather than an emotional response to fear or uncertainty.",
+      "I see this. It's definitely an emotional response, yet it's one that protects me from harm and allows me to move forward. Yeah I didn't have to delete thousands of followers, but now I don't have to watch thousands of stories and get a thousand doses of FOMO. I don't push everybody away, and still I have twenty people in my life at all times that have my back to the highest degree. It's all I need: quality over quantity.",
+      "Moving between muses – You justify detachment by saying muses are meant to be temporary, not something to hold onto.",
+      "I think this is more a product of those two circumstances than a fear of attachment. I'm not anxious or avoidant, and would have given a real effort if it made sense. More than that, I'm reminded of the Thich Nhat Hanh quote: we must love in a way where the person you love feels free. It's not apt to cling to what isn't meant to be. I learned with Erin that if you really admire someone and care for them, it's important to admit when you should not need to be together. Instead, you should root for their success even with another, as they are with another. For if you are both good people who deserve a chance to achieve their dreams, I think it would be a negative to be against that.",
+      "Constant motion and ambition – You tell yourself you don't fear attachment, yet much of your life is structured to avoid staying still.",
+      "Also true, I admit it. But if I wanted everything handed to me, if I wanted an easy life and to drive an Aston Martin/G-wagon, I would have stayed in Elgin Estates. I've structured my life this way with intention. I'm on a mission to see how much pressure I can shoulder, because I know the outcome will make me stronger. I never wanted an easy life, but a meaningful one. In all cases that I fail here, I return to a life that most could not even imagine. But until then, I choose to run, to stay in movement, to suffer failure, setback, in states of near poverty. I'm not designing the world—I'm designing a man.",
+      "Your relationship with struggle – You acknowledge that you might romanticize struggle but also frame it as an inevitable, even necessary, part of success.",
+      "Is success material wealth? I don't see it that way. Success is tracing the line between where you started and where you end, and it's all the moments in between. When you're born on the final level of the map, there's nothing left. Most people wouldn't leave a golden plate, and a lifetime of abundance to take the hard road. But most people also wouldn't be in my position. Luck isn't free; it comes at a cost."
+    ]
+  },
+  {
     id: '009',
     number: '009',
     date: '02/22/25',
