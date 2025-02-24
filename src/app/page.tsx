@@ -66,9 +66,9 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
-    id: '011',
-    number: '011',
-    date: '02/24/25',
+    id: '010',
+    number: '010',
+    date: '02/23/25',
     location: 'New York City',
     content: [
       "Safety. It follows me still, what Jason told me when we went  to grab Tsujita that one night in 2021. \"You remember that you are the value that you provide,\" in between slurps of ramen and quips along the lines of \"life is ass,\" and \"shit sucks.\" We've come a long way since then, and at the time I took it to heart. I thought it meant that the second you were worthless to another person, or to the world, your value is gone.",
@@ -79,23 +79,6 @@ const notes: NoteData[] = [
       "Something I know about myself is that it's easy for me to be happy. I'm happy by default, and throw myself out of that state on purpose. Being home for the winter, I was happy, and I threw myself here. Once here, I complained, and I whined, and I fell out of the routine that carved me into a better man, seeking happiness in all the wrong places. But I know something else: I don't want to be happy: I want to win. And it now appears that winning to me is not success. It's not Figma, it's not money. It's pride in becoming.",
       "Pride is what gives my life meaning, not pleasure. And I see clearer than ever what it will take to get there. Some might mistake this vision for a hatred of the present. I could see how I may seem on the surface to be rejecting joy for some future hypothetical where I may finally be content. But that's the third side of my personality: the one that only I can see. I'm gratified in the present only when striving for the future. I can't stop moving. Like Lauren said to Jayson: \"Jimmy doesn't let the grass grow beneath his feet.\" I've been so bitter about what has been taken away from me. My stability, routine, the life that I'd built in California, and the ground that still crumbles under me as I walk. Yet I now see that nothing has been taken, because nothing can be taken. I was never trying to build anything. I was trying to build a person, and I've fallen out of touch with that. Nothing external gives joy; actions make the man.",
       "Home is safety, and home is not a place. It's not what you build for yourself. It's what you build of yourself. I've organized a list of targets for this next phase of development. I'm excited for who I'm about to become. Not excited about, but excited for."
-    ]
-  },
-  {
-    id: '010',
-    number: '010',
-    date: '02/23/25',
-    location: 'New York City',
-    content: [
-      "I'm starting to pick up steam; In that time at the café, I've found clarity, and it's been gratifying. Really I just needed to go touch grass—being stuck in the crib hasn't been good for the vibes. Because Charlie and I click on the future of Microsoft AI being deeply human and interfaced through voice reflection, I've been feeding these entries into Copilot to see what my negative blinds spots are so I can grow. I'll address them here:",
-      "Pushing people away – You frame it as a necessity for success and stability rather than an emotional response to fear or uncertainty.",
-      "I see this. It's definitely an emotional response, yet it's one that protects me from harm and allows me to move forward. Yeah I didn't have to delete thousands of followers, but now I don't have to watch thousands of stories and get a thousand doses of FOMO. I still I have two dozen in my life at all times that have my back to the highest degree. It's all I need: quality over quantity, and it's more of both than most.",
-      "Moving between muses – You justify detachment by saying muses are meant to be temporary, not something to hold onto.",
-      "I think this is more a product of those two circumstances than a fear of attachment. I'm not anxious or avoidant, and would have given a real effort if it made sense. More than that, I'm reminded of the Thich Nhat Hanh quote: you must love in a way where the person you love feels free. It's not apt to cling to what isn't meant to be. I learned from Erin that if you really admire someone and care for them, it's important to admit with grace when you should not  be together. Instead, you should root for their success even with another, as they are with another. For if you are both good people who deserve a chance to achieve their dreams, I think it would be really bad to stand in the way of that.",
-      "Constant motion and ambition – You tell yourself you don't fear attachment, yet much of your life is structured to avoid staying still.",
-      "Also true, I admit it. But if I wanted everything handed to me, if I wanted an easy life and to drive an Aston Martin/G-wagon, I would have stayed in Elgin Chantrell. I've structured my life this way with intention. I'm on a mission to see how much pressure I can shoulder, because I know the outcome will make me stronger. I never wanted an easy life, but a meaningful one. In all cases that I fail here, I return to a world that most could not even imagine. But until then, I choose to run, to stay in movement, to suffer failure, setbacks, in states of near poverty. I'm not designing the world—I'm designing a man.",
-      "Your relationship with struggle – You acknowledge that you might romanticize struggle but also frame it as an inevitable, even necessary, part of success.",
-      "Is success material wealth? I don't see it that way. Success is tracing the line between where you started and where you end, and it's all the moments in between. When you're born on the final level of the map, there's nothing left. Most people wouldn't leave a golden plate and a lifetime of abundance to take the hard road. But most people also wouldn't be in my position. Luck isn't free; it comes at a cost."
     ]
   },
   {
