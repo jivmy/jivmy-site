@@ -66,9 +66,25 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
+    id: '011',
+    number: '011',
+    date: '02/28/25',
+    location: 'New York City',
+    content: [
+      "Safety. It follows me still, what Jason told me when we went  to grab Tsujita that one night in 2021. \"You remember that you are the value that you provide,\" in between slurps of ramen and quips along the lines of \"life is ass,\" and \"shit sucks.\" We've come a long way since then, and at the time I took it to heart. I thought it meant that the second you were worthless to another person, or to the world, your value is gone.",
+      "I gave the book to Ryan, but I can paraphrase the quote I'd like to draw from here. \"No matter the well, a colossus maintains his size. Strip him of his titles, lay him bare, and we will measure the man.\" Peace, a feeling that it will be okay, no matter what happens, is not something that you find: it's what you carry. I have enough wisdom to see when I'm contradicting myself. Maybe not always in the moment, but often thereafter. Here in New York, I've fallen into the illusion that I've lost my spark. But these past few days have been different. I see the path forward.",
+      "Now, I'm taking Jason's words to heart. Yes, you are the value that you provide, but not to others, not to the world. You are the value that you provide to yourself. How do you speak to yourself? Do you treat yourself with grace? Do you act in a way that is conducive to your goals, or do you self-sabotage? I've been indulging in vices to escape from sitting with my emotions. Not everything needs to be picked apart, analyzed, and spit into meaning. And so, here's the other side of my personality.",
+      "Garrett, Ryan, Isa, and Pierre all motioned that the most interesting thing about me is the duality between my two sides. One one, I'm driven by emotion. On the other, I'm relaxed. In New York amid instability and like Harvey Dent from Batman, I've lost my chill. I've leaned into rationalization, trying to convince myself that this life makes sense, instead of putting my energy into making it so. I've forgotten to breathe. Back in California, I had become the opposite. I move forward by increasing the magnitude of both in conjunction, striving to strive with ease and grace.",
+      "At the Izakaya with Spencer today, between chopsticks of crab sticks and sips of Sapporo (what a sentence), I talked about how I've stumbled into the peak of my industry, into what was once my dream role and yet have missed the anticipated gratification. I landed Figma AI, and tomorrow I fly to San Francisco for the chance at an even bigger opportunity. And yet I feel smaller than ever.",
+      "Something I know about myself is that it's easy for me to be happy. I'm happy by default, and throw myself out of that state on purpose. Being home for the winter, I was happy, and I threw myself here. Once here, I complained, and I whined, and I fell out of the routine that carved me into a better man, seeking happiness in all the wrong places. But I know something else: I don't want to be happy: I want to win. And it now appears that winning to me is not success. It's not Figma, it's not money. It's pride in becoming.",
+      "Pride is what gives my life meaning, not pleasure. And I see clearer than ever what it will take to get there. Some might mistake this vision for a hatred of the present. I could see how I may seem on the surface to be rejecting joy for some future hypothetical where I may finally be content. But that's the third side of my personality: the one that only I can see. I'm gratified in the present only when striving for the future. I can't stop moving. Like Lauren said to Jayson: \"Jimmy doesn't let the grass grow beneath his feet.\" I've been so bitter about what has been taken away from me. My stability, routine, the life that I'd built in California, and the ground that still crumbles under me as I walk. Yet I now see that nothing has been taken, because nothing can be taken. I was never trying to build anything. I was trying to build a person, and I've fallen out of touch with that. Nothing external gives joy; actions make the man.",
+      "Home is safety, and home is not a place. It's not what you build for yourself. It's what you build of yourself. I've organized a list of targets for this next phase of development. I'm excited for who I'm about to become. Not excited about, but excited for."
+    ]
+  },
+  {
     id: '010',
     number: '010',
-    date: '02/23/25',
+    date: '02/27/25',
     location: 'New York City',
     content: [
       "I'm starting to pick up steam; In that time at the café, I've found clarity, and it's been gratifying. Really I just needed to go touch grass—being stuck in the crib hasn't been good for the vibes. Because Charlie and I click on the future of Microsoft AI being deeply human and interfaced through voice reflection, I've been feeding these entries into Copilot to see what my negative blinds spots are so I can grow. I'll address them here:",
