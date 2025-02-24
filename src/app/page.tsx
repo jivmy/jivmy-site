@@ -68,7 +68,7 @@ const notes: NoteData[] = [
   {
     id: '011',
     number: '011',
-    date: '02/28/25',
+    date: '02/24/25',
     location: 'New York City',
     content: [
       "Safety. It follows me still, what Jason told me when we went  to grab Tsujita that one night in 2021. \"You remember that you are the value that you provide,\" in between slurps of ramen and quips along the lines of \"life is ass,\" and \"shit sucks.\" We've come a long way since then, and at the time I took it to heart. I thought it meant that the second you were worthless to another person, or to the world, your value is gone.",
@@ -84,7 +84,7 @@ const notes: NoteData[] = [
   {
     id: '010',
     number: '010',
-    date: '02/27/25',
+    date: '02/23/25',
     location: 'New York City',
     content: [
       "I'm starting to pick up steam; In that time at the café, I've found clarity, and it's been gratifying. Really I just needed to go touch grass—being stuck in the crib hasn't been good for the vibes. Because Charlie and I click on the future of Microsoft AI being deeply human and interfaced through voice reflection, I've been feeding these entries into Copilot to see what my negative blinds spots are so I can grow. I'll address them here:",
