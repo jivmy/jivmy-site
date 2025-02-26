@@ -72,14 +72,14 @@ const notes: NoteData[] = [
     location: 'New York City',
     content: [
       "Stillness, huh? Well let's talk about it. Six designers shape Copilot, the pinnacle of Microsoft AI, which now rests at the apex of the entire organization. Roughly two hundred designers work at that apex, and six thousand fight underneath for the chance at an internal transfer. Tens of thousands more gather at the door, knocking at its gates. Hmm? Sorry, it seems that I made a mistake. I heard they hired a seventh, the youngest on the team by a decade. I don't know that man, but I see him behind the mirror.",
-      "From a $25 million dollar play project to the most defining role in the history of technology. It's not product design. We define the personality of the world's first digital species. It's calm now. Stillness exists under pressure. Few measure that in absence of table stakes, stillness carries no meaning, and without movement, there exists no table stakes. I went to New York to see if I would like it, and that I can't answer the question is enough signal to counter the tradeoffs. Now that I could stay, it seems that I wont."
+      "From a $25 million dollar play project to the most defining role in the history of technology. It's not product design. We define the personality of the world's first digital species. It's calm now. Stillness exists under pressure. Few measure that in absence of table stakes, stillness carries no meaning, and without movement, there exists no table stakes. I went to New York to see if I would like it, and that I can't answer the question is enough signal to counter the tradeoffs. Now that I could stay, it seems that I wont. Although it's true that there was never a final destination, I have arrived."
     ]
   },
   {
     id: '011',
     number: '011',
     date: '02/28/25',
-    location: 'New York City',
+    location: 'San Francisco',
     content: [
       "But here's what he doesn't see. He believes he's optimizing, always chasing the best possible outcome, moving toward the highest version of himself. But when you step back, it's not optimization—it's filtration. He isn't just selecting what's best; he's removing what doesn't fit. He trims, refines, cuts away anything that disrupts the vision. Progress, in theory, should expand—more knowledge, more connection, more depth. But his world is narrowing. Every decision isn't just about gaining—it's about shedding. Each move he makes eliminates possibilities, reducing the paths forward until only one remains, and when he gets there, the process will start again.",
       "He says he fears stagnation, but the real fear is something far more insidious. Stagnation implies failure, the loss of movement, the death of ambition. But he knows he will never truly stagnate—he's wired for momentum, built for motion. What he really fears is stopping and realizing that he was never lost to begin with. That the movement itself was never about progress, but about maintaining an illusion of pursuit. He's not searching for something. He's ensuring that the chase never ends, because an endpoint would force him to ask whether he ever needed to run at all.",
