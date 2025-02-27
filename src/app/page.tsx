@@ -69,7 +69,7 @@ function Note({ number, date, location, children }: { number: string, date: stri
 
 const notes: NoteData[] = [
   {
-    date: '02/29/25',
+    date: '02/26/25',
     location: 'New York City',
     content: [
       "I spent the 23rd year of my life chasing adventure, and near its end I followed through with my promise to move to New York. Now that everything has been solidified, I'm free to spill my beans. I'll start by saying that I think it's rare to cross paths with someone that you click with immediately, and even more rare for them to exert such an influence on you that drives you to think about a life beyond your own, even if just for a moment. I had been living in a stable and well designed chapter: each element of my life was curated for advancement. Confident and settled, I met someone that affirmed my core belief at the time: a man like me could have everything that he wants, and more. And so I was inspired to move to New York despite the known risks associated, because I believed that everything could, and would fall into place, because I'm a lucky person. I knew that we had six months of runway, and in that time I planned to pivot to my next thing, and to start my life in New York, the last curiosity I carried for America.",
